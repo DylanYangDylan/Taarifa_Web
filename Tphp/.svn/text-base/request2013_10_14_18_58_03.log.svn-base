@@ -1,0 +1,44 @@
+stdClass Object
+(
+    [filename] => a220f05d-a85b-44ca-9982-d39083860c56
+    [categoriesList] => Array
+        (
+            [0] => 138
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-14 18:58:00
+            [Descript] => test
+            [dateSubmitReport] => 2013-10-14 19:00:27
+            [idForm] => 32
+            [SimCardSn] => 0
+            [Title] => test2
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -1
+            [lat] => -1
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => offhand
+            [email] => ghana
+            [lastName] => BMW
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => satisfied
+                    [id] => 466
+                )
+
+        )
+
+    [extname] => jpg
+)

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers
+END
+simplegroups.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/simplegroups.php
+END
+group_iframemap.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/group_iframemap.php
+END
+simplegroupmap_json.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/simplegroupmap_json.php
+END
+admin_simplegroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin_simplegroup.php
+END

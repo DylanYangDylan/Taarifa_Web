@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/144/trunk/tptaarings/application/config
+END
+backup_database.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/144/trunk/tptaarings/application/config/backup_database.php
+END
+benchmark.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/144/trunk/tptaarings/application/config/benchmark.php
+END
+locale.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/144/trunk/tptaarings/application/config/locale.php
+END
+actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/config/actions.php
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/config/settings.php
+END
+auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/144/trunk/tptaarings/application/config/auth.php
+END
+cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/144/trunk/tptaarings/application/config/cache.php
+END
+database.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/config/database.php
+END
+cdn.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/144/trunk/tptaarings/application/config/cdn.php
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/144/trunk/tptaarings/application/config/config.php
+END
+api.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/144/trunk/tptaarings/application/config/api.php
+END
+map.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/144/trunk/tptaarings/application/config/map.php
+END
+database.template.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/144/trunk/tptaarings/application/config/database.template.php
+END
+config.template.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/144/trunk/tptaarings/application/config/config.template.php
+END
+plugins.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/config/plugins.php
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/144/trunk/tptaarings/application/config/routes.php
+END
+image.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/144/trunk/tptaarings/application/config/image.php
+END
+session.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/config/session.php
+END
+upload.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/144/trunk/tptaarings/application/config/upload.php
+END
+version.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/config/version.php
+END
+bkup_database.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/144/trunk/tptaarings/application/config/bkup_database.php
+END
+openlayers.ushahidi.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/tptaarings/application/config/openlayers.ushahidi.cfg
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/144/trunk/tptaarings/application/config/email.php
+END

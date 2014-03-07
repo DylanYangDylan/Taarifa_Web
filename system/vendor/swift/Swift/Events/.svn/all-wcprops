@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events
+END
+ListenerMapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/ListenerMapper.php
+END
+SendEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/SendEvent.php
+END
+DisconnectEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/DisconnectEvent.php
+END
+ConnectEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/ConnectEvent.php
+END
+ConnectListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/ConnectListener.php
+END
+SendListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/SendListener.php
+END
+DisconnectListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/DisconnectListener.php
+END
+CommandEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/CommandEvent.php
+END
+ResponseEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/ResponseEvent.php
+END
+BeforeSendListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/BeforeSendListener.php
+END
+CommandListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/CommandListener.php
+END
+ResponseListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/ResponseListener.php
+END
+Listener.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/Listener.php
+END
+BeforeCommandListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/4/trunk/tptaarings/system/vendor/swift/Swift/Events/BeforeCommandListener.php
+END

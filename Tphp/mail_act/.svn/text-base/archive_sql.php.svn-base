@@ -1,0 +1,29 @@
+<?php
+include("../mysql_connect.php");
+
+$incident_id=  $_GET['incident_id'];
+
+$get_archive_num = "SELECT incident_archive FROM incident WHERE id = ".$incident_id;
+$each_archive_num = mysql_query($get_archive_num);
+$incident_archive = mysql_fetch_array ($each_archive_num);
+
+
+if($incident_archive['incident_archive'] == 1){
+	getUnArchive($incident_id);
+}
+else{
+	getArchive($incident_id);
+}
+
+
+function getArchive($id){
+	$strSqlCommand = "UPDATE `incident` SET `incident_archive` = 1 WHERE `id`='".$id."';";
+	$result = mysql_query($strSqlCommand);
+}
+	
+function getUnArchive($id){
+	$strSqlCommand = "UPDATE `incident` SET `incident_archive` = 0 WHERE `id`='".$id."';";
+	$result = mysql_query($strSqlCommand);
+}
+ 
+?>

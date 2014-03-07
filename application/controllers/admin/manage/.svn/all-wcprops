@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage
+END
+sharing.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/sharing.php
+END
+blocks.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/blocks.php
+END
+scheduler.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/scheduler.php
+END
+actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/actions.php
+END
+badges.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/badges.php
+END
+forms.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/144/trunk/tptaarings/application/controllers/admin/manage/forms.php
+END

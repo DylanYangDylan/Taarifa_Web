@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/4/trunk/tptaarings/tests/phpunit
+END
+phpunit.xml.template
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/4/trunk/tptaarings/tests/phpunit/phpunit.xml.template
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/tests/phpunit/bootstrap.php
+END
+testbootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/tests/phpunit/testbootstrap.php
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/4/trunk/tptaarings/tests/phpunit/.gitignore
+END

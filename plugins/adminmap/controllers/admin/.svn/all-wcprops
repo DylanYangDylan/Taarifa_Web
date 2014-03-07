@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/4/trunk/tptaarings/plugins/adminmap/controllers/admin
+END
+adminmap_json.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/plugins/adminmap/controllers/admin/adminmap_json.php
+END
+adminmap_reports.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/4/trunk/tptaarings/plugins/adminmap/controllers/admin/adminmap_reports.php
+END
+adminmap.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/4/trunk/tptaarings/plugins/adminmap/controllers/admin/adminmap.php
+END

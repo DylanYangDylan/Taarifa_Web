@@ -1,0 +1,44 @@
+stdClass Object
+(
+    [filename] => 7647a3bf-af47-4dd5-aad4-f105596ce95b
+    [categoriesList] => Array
+        (
+            [0] => 154
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-08-22 08:14:00
+            [Descript] => Aa
+            [dateSubmitReport] => 2013-08-22 08:15:55
+            [idForm] => 32
+            [SimCardSn] => 0
+            [Title] => Testaaa
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -1
+            [lat] => -1
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => Eee
+            [email] => Ggg
+            [lastName] => Fff
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => satisfied
+                    [id] => 466
+                )
+
+        )
+
+    [extname] => jpg
+)

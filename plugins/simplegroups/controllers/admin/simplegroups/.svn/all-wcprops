@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups
+END
+nogroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/nogroup.php
+END
+reportssuper.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/reportssuper.php
+END
+reports.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/reports.php
+END
+adminmap_json.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/adminmap_json.php
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/settings.php
+END
+profile.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/profile.php
+END
+users.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/users.php
+END
+comments.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/comments.php
+END
+adminmap.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/adminmap.php
+END
+forwardto.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/forwardto.php
+END
+messages.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/messages.php
+END
+dashboard.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/controllers/admin/simplegroups/dashboard.php
+END

@@ -1,0 +1,46 @@
+stdClass Object
+(
+    [filename] => b3e91e03-f6dc-48e5-8812-2f80d0d81d38
+    [categoriesList] => Array
+        (
+            [0] => 124
+            [1] => 127
+            [2] => 124
+            [3] => 127
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-08 12:32:00
+            [Descript] => budget
+            [dateSubmitReport] => 2013-10-08 12:40:49
+            [idForm] => 1
+            [Title] => kpesese 
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 0.108629
+            [lat] => 5.703322
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => kwame 
+            [email] => got@mail.com
+            [lastName] => godson 
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => 100
+                    [id] => -1
+                )
+
+        )
+
+    [extname] => jpg
+)

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8
+END
+strspn.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strspn.php
+END
+strpos.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strpos.php
+END
+transliterate_to_ascii.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/transliterate_to_ascii.php
+END
+strcspn.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strcspn.php
+END
+str_pad.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/str_pad.php
+END
+rtrim.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/rtrim.php
+END
+strcasecmp.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strcasecmp.php
+END
+strlen.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strlen.php
+END
+from_unicode.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/from_unicode.php
+END
+stristr.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/stristr.php
+END
+trim.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/trim.php
+END
+strrpos.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strrpos.php
+END
+str_ireplace.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/str_ireplace.php
+END
+substr_replace.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/substr_replace.php
+END
+ucfirst.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/ucfirst.php
+END
+substr.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/substr.php
+END
+str_split.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/str_split.php
+END
+ord.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/ord.php
+END
+strtolower.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strtolower.php
+END
+strrev.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strrev.php
+END
+ucwords.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/ucwords.php
+END
+strtoupper.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/strtoupper.php
+END
+ltrim.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/ltrim.php
+END
+to_unicode.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/system/core/utf8/to_unicode.php
+END

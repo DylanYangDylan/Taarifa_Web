@@ -1,0 +1,95 @@
+stdClass Object
+(
+    [categoriesList] => Array
+        (
+            [0] => 125
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-09-11 16:57:00
+            [Descript] => Wwww
+            [dateSubmitReport] => 2013-09-11 16:59:02
+            [idForm] => 16
+            [Title] => Www
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 121.48507151737067
+            [lat] => 25.00530582576852
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => Zzz
+            [email] => Zzz
+            [lastName] => Zzz
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => 20130811
+                    [id] => 308
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 234
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] => Formal
+                    [id] => 237
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 238
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 239
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 240
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 256
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 257
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] => Home
+                    [id] => 258
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 259
+                )
+
+        )
+
+)

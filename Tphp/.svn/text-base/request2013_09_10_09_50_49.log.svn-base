@@ -1,0 +1,46 @@
+stdClass Object
+(
+    [filename] => add6f643-ce00-4652-a9b2-37e1d40da758
+    [categoriesList] => Array
+        (
+            [0] => 154
+            [1] => 150
+            [2] => 154
+            [3] => 142
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-09-10 17:40:00:00
+            [Descript] => Camera *1
+            [dateSubmitReport] => 2013-09-10 17:50:49
+            [idForm] => 32
+            [Title] => Samsung no wifi
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 121.48538913090974
+            [lat] => 25.00519417179473
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => Q
+            [email] => Qa@gmail.com
+            [lastName] => A
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => satisfied
+                    [id] => 466
+                )
+
+        )
+
+    [extname] => jpg
+)

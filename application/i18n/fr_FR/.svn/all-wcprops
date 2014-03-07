@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR
+END
+alerts.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/alerts.php
+END
+contact.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/contact.php
+END
+sharing.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/sharing.php
+END
+datetime.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/datetime.php
+END
+installer.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/installer.php
+END
+footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/footer.php
+END
+stats.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/stats.php
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/settings.php
+END
+auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/auth.php
+END
+form.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/form.php
+END
+database.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/database.php
+END
+notifications.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/notifications.php
+END
+report.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/report.php
+END
+layer.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/layer.php
+END
+libraries.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/libraries.php
+END
+tooltips.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/tooltips.php
+END
+category.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/category.php
+END
+bug.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/bug.php
+END
+mhi.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/mhi.php
+END
+ui_main.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/ui_main.php
+END
+message.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/message.php
+END
+roles.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/roles.php
+END
+feedback.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/feedback.php
+END
+reporters.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/reporters.php
+END
+ui_admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/ui_admin.php
+END
+comments.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/comments.php
+END
+feeds.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/feeds.php
+END
+imap.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/imap.php
+END
+upgrade.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/upgrade.php
+END
+core.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/144/trunk/tptaarings/application/i18n/fr_FR/core.php
+END

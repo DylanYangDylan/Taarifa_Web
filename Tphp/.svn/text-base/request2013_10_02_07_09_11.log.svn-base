@@ -1,0 +1,42 @@
+stdClass Object
+(
+    [filename] => eeb8ca93-1206-414f-9ee1-a0ff1686a4dd
+    [categoriesList] => Array
+        (
+            [0] => 138
+            [1] => 136
+            [2] => 155
+            [3] => 158
+            [4] => 150
+            [5] => 151
+            [6] => 146
+            [7] => 145
+            [8] => 152
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-02 14:18:00:00
+            [Descript] => Why
+            [dateSubmitReport] => 2013-10-02 15:09:10
+            [idForm] => 1
+            [SimCardSn] => 0
+            [Title] => Why one
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 121.4851715
+            [lat] => 25.0052742
+            [name] => 235?????????????544?14-2?
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => Why
+            [email] => Why
+            [lastName] => Why
+        )
+
+    [extname] => jpg
+)

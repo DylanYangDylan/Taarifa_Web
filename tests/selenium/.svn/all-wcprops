@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium
+END
+main_suite.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/main_suite.html
+END
+admin_suite.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/admin_suite.html
+END
+alerts_suite.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts_suite.html
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models
+END
+simplegroups_groups_users.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_groups_users.php
+END
+simplegroups_message_category.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_message_category.php
+END
+simplegroups_groups_message.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_groups_message.php
+END
+simplegroups_roles.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_roles.php
+END
+simplegroups_users_roles.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_users_roles.php
+END
+simplegroups_groups_number.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_groups_number.php
+END
+simplegroups_incident_category.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_incident_category.php
+END
+simplegroups_groups_incident.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_groups_incident.php
+END
+simplegroups_category.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_category.php
+END
+simplegroups_category_lang.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_category_lang.php
+END
+simplegroups_groups.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/4/trunk/tptaarings/plugins/simplegroups/models/simplegroups_groups.php
+END

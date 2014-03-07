@@ -1,0 +1,43 @@
+stdClass Object
+(
+    [filename] => c819d5ab-b307-4547-bf6b-7f508bc15e0f
+    [categoriesList] => Array
+        (
+            [0] => 148
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2012-01-01 07:25:00
+            [Descript] => deveappl 
+            [dateSubmitReport] => 2012-01-01 07:30:02
+            [idForm] => 1
+            [Title] => suleman umar 
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 0.084762
+            [lat] => 5.761088
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => e
+            [email] => kofi.yeboah@yahoo.com
+            [lastName] => god
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => 100
+                    [id] => -1
+                )
+
+        )
+
+    [extname] => jpg
+)

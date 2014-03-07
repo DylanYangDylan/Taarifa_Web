@@ -1,0 +1,365 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/4/trunk/tptaarings/sql
+END
+upgrade42-43.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade42-43.sql
+END
+upgrade51-52.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade51-52.sql
+END
+upgrade60-61.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade60-61.sql
+END
+upgrade15-16.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade15-16.sql
+END
+upgrade33-34.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade33-34.sql
+END
+upgrade24-25.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade24-25.sql
+END
+upgrade29-30.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade29-30.sql
+END
+upgrade62-63.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade62-63.sql
+END
+upgrade35-36.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade35-36.sql
+END
+upgrade44-45.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade44-45.sql
+END
+upgrade26-27.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade26-27.sql
+END
+upgrade53-54.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade53-54.sql
+END
+upgrade17-18.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade17-18.sql
+END
+upgrade49-50.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade49-50.sql
+END
+upgrade.sql
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade.sql
+END
+upgrade55-56.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade55-56.sql
+END
+upgrade64-65.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade64-65.sql
+END
+upgrade37-38.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade37-38.sql
+END
+upgrade28-29.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade28-29.sql
+END
+upgrade46-47.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade46-47.sql
+END
+upgrade66-67.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade66-67.sql
+END
+upgrade57-58.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade57-58.sql
+END
+upgrade48-49.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade48-49.sql
+END
+ushahidi.sql
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/4/trunk/tptaarings/sql/ushahidi.sql
+END
+upgrade68-69.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade68-69.sql
+END
+upgrade21-22.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade21-22.sql
+END
+upgrade12-13.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade12-13.sql
+END
+upgrade30-31.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade30-31.sql
+END
+upgrade41-42.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade41-42.sql
+END
+upgrade14-15.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade14-15.sql
+END
+upgrade23-24.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade23-24.sql
+END
+upgrade50-51.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade50-51.sql
+END
+upgrade32-33.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade32-33.sql
+END
+upgrade19-20.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade19-20.sql
+END
+upgrade16-17.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade16-17.sql
+END
+upgrade61-62.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade61-62.sql
+END
+upgrade52-53.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade52-53.sql
+END
+upgrade43-44.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade43-44.sql
+END
+upgrade25-26.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade25-26.sql
+END
+upgrade34-35.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade34-35.sql
+END
+upgrade39-40.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade39-40.sql
+END
+upgrade18-19.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade18-19.sql
+END
+upgrade63-64.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade63-64.sql
+END
+upgrade45-46.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade45-46.sql
+END
+upgrade36-37.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade36-37.sql
+END
+upgrade27-28.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade27-28.sql
+END
+upgrade54-55.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade54-55.sql
+END
+upgrade59-60.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade59-60.sql
+END
+upgrade47-48.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade47-48.sql
+END
+upgrade56-57.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade56-57.sql
+END
+upgrade38-39.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade38-39.sql
+END
+upgrade65-66.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade65-66.sql
+END
+upgrade58-59.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade58-59.sql
+END
+upgrade67-68.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade67-68.sql
+END
+upgrade20-21.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade20-21.sql
+END
+upgrade11-12.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade11-12.sql
+END
+upgrade13-14.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade13-14.sql
+END
+upgrade31-32.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade31-32.sql
+END
+upgrade40-41.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade40-41.sql
+END
+upgrade22-23.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/tptaarings/sql/upgrade22-23.sql
+END

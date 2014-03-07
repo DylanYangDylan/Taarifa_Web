@@ -1,0 +1,171 @@
+stdClass Object
+(
+    [filename] => da941a4f-68c5-4aea-9582-77a6368806f4
+    [categoriesList] => Array
+        (
+            [0] => 171
+            [1] => 171
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-21 05:21:00
+            [Descript] => dress shop construction 
+            [dateSubmitReport] => 2013-10-21 05:24:48
+            [idForm] => 44
+            [SimCardSn] => 89233020500073533891
+            [Title] => seeta dress
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -0.20427926426673948
+            [lat] => 5.557078945681042
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => ama 
+            [email] => aobeng@intel.com
+            [lastName] => obeng 
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] =>  Commercial
+                    [id] => 676
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => Other Business
+                    [id] => 677
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] =>  Completed
+                    [id] => 678
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => Without Permit
+                    [id] => 679
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => 2013921
+                    [id] => 680
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => Work in Progress
+                    [id] => 681
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => Sir Allan Barnes 
+                    [id] => 682
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] =>  Unschemed Area
+                    [id] => 683
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] =>  2 Storey
+                    [id] => 684
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => recalcitrant developer 
+                    [id] => 685
+                )
+
+            [10] => stdClass Object
+                (
+                    [value] =>  Not Sure
+                    [id] => 686
+                )
+
+            [11] => stdClass Object
+                (
+                    [value] =>  Commercial
+                    [id] => 676
+                )
+
+            [12] => stdClass Object
+                (
+                    [value] => Other Business
+                    [id] => 677
+                )
+
+            [13] => stdClass Object
+                (
+                    [value] =>  Completed
+                    [id] => 678
+                )
+
+            [14] => stdClass Object
+                (
+                    [value] => Without Permit
+                    [id] => 679
+                )
+
+            [15] => stdClass Object
+                (
+                    [value] => 2013921
+                    [id] => 680
+                )
+
+            [16] => stdClass Object
+                (
+                    [value] => Work in Progress
+                    [id] => 681
+                )
+
+            [17] => stdClass Object
+                (
+                    [value] => Sir Allan Barnes 
+                    [id] => 682
+                )
+
+            [18] => stdClass Object
+                (
+                    [value] =>  Unschemed Area
+                    [id] => 683
+                )
+
+            [19] => stdClass Object
+                (
+                    [value] =>  2 Storey
+                    [id] => 684
+                )
+
+            [20] => stdClass Object
+                (
+                    [value] => recalcitrant developer 
+                    [id] => 685
+                )
+
+            [21] => stdClass Object
+                (
+                    [value] =>  Not Sure
+                    [id] => 686
+                )
+
+        )
+
+    [extname] => jpg
+)

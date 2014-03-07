@@ -1,0 +1,174 @@
+stdClass Object
+(
+    [categoriesList] => Array
+        (
+            [0] => 154
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-08-22 15:24:00
+            [Descript] => tedt
+            [dateSubmitReport] => 2013-08-22 15:32:23
+            [idForm] => 1
+            [SimCardSn] => 
+            [Title] => testMarrket
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -1
+            [lat] => -1
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => ee
+            [email] => tt
+            [lastName] => rr
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => Primary
+                    [id] => 414
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => Fully roofed
+                    [id] => 415
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] => Agbogblah
+                    [id] => 413
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 419
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => Citizenship
+                    [id] => 424
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 420
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 418
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 416
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] => 20130723
+                    [id] => 423
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => 1-5
+                    [id] => 422
+                )
+
+            [10] => stdClass Object
+                (
+                    [value] => Class
+                    [id] => 425
+                )
+
+            [11] => stdClass Object
+                (
+                    [value] => 20130721
+                    [id] => 426
+                )
+
+            [12] => stdClass Object
+                (
+                    [value] => 20130714
+                    [id] => 427
+                )
+
+            [13] => stdClass Object
+                (
+                    [value] => 20130729
+                    [id] => 428
+                )
+
+            [14] => stdClass Object
+                (
+                    [value] => 3-4
+                    [id] => 429
+                )
+
+            [15] => stdClass Object
+                (
+                    [value] => 2
+                    [id] => 430
+                )
+
+            [16] => stdClass Object
+                (
+                    [value] => 2
+                    [id] => 431
+                )
+
+            [17] => stdClass Object
+                (
+                    [value] => 2
+                    [id] => 432
+                )
+
+            [18] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 433
+                )
+
+            [19] => stdClass Object
+                (
+                    [value] => No
+                    [id] => 434
+                )
+
+            [20] => stdClass Object
+                (
+                    [value] => 80-90
+                    [id] => 435
+                )
+
+            [21] => stdClass Object
+                (
+                    [value] => 90-100
+                    [id] => 436
+                )
+
+            [22] => stdClass Object
+                (
+                    [value] => lotterypaper
+                    [id] => 437
+                )
+
+        )
+
+)

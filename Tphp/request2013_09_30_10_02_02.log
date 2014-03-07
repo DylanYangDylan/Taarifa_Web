@@ -1,0 +1,287 @@
+stdClass Object
+(
+    [categoriesList] => Array
+        (
+            [0] => 126
+            [1] => 129
+            [2] => 121
+            [3] => 126
+            [4] => 129
+            [5] => 121
+            [6] => 126
+            [7] => 129
+            [8] => 121
+            [9] => 126
+            [10] => 129
+            [11] => 121
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-09-27 17:35:00:00:00
+            [Descript] => Fccccc
+            [dateSubmitReport] => 2013-09-30 18:02:01
+            [idForm] => 1
+            [SimCardSn] => 0
+            [Title] => Testforedit
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 121.4851526174696
+            [lat] => 25.005356864599918
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => Ccccc
+            [email] => Cccccc
+            [lastName] => Ccccc
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => Primary
+                    [id] => 414
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => Agbogblah
+                    [id] => 413
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 419
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 420
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 418
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 416
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 423
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] => 1-5
+                    [id] => 422
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] => Class
+                    [id] => 425
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 426
+                )
+
+            [10] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 427
+                )
+
+            [11] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 428
+                )
+
+            [12] => stdClass Object
+                (
+                    [value] => 1-2
+                    [id] => 429
+                )
+
+            [13] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 430
+                )
+
+            [14] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 431
+                )
+
+            [15] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 432
+                )
+
+            [16] => stdClass Object
+                (
+                    [value] => 0
+                    [id] => 433
+                )
+
+            [17] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 434
+                )
+
+            [18] => stdClass Object
+                (
+                    [value] => 90-100
+                    [id] => 435
+                )
+
+            [19] => stdClass Object
+                (
+                    [value] => 100
+                    [id] => 436
+                )
+
+            [20] => stdClass Object
+                (
+                    [value] => Primary
+                    [id] => 414
+                )
+
+            [21] => stdClass Object
+                (
+                    [value] => Agbogblah
+                    [id] => 413
+                )
+
+            [22] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 419
+                )
+
+            [23] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 420
+                )
+
+            [24] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 418
+                )
+
+            [25] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 416
+                )
+
+            [26] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 423
+                )
+
+            [27] => stdClass Object
+                (
+                    [value] => 1-5
+                    [id] => 422
+                )
+
+            [28] => stdClass Object
+                (
+                    [value] => Class
+                    [id] => 425
+                )
+
+            [29] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 426
+                )
+
+            [30] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 427
+                )
+
+            [31] => stdClass Object
+                (
+                    [value] => 20130827
+                    [id] => 428
+                )
+
+            [32] => stdClass Object
+                (
+                    [value] => 1-2
+                    [id] => 429
+                )
+
+            [33] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 430
+                )
+
+            [34] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 431
+                )
+
+            [35] => stdClass Object
+                (
+                    [value] => 1
+                    [id] => 432
+                )
+
+            [36] => stdClass Object
+                (
+                    [value] => 0
+                    [id] => 433
+                )
+
+            [37] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 434
+                )
+
+            [38] => stdClass Object
+                (
+                    [value] => 40-50
+                    [id] => 435
+                )
+
+            [39] => stdClass Object
+                (
+                    [value] => 100
+                    [id] => 436
+                )
+
+        )
+
+)

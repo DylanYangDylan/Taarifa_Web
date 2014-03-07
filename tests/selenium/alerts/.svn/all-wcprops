@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts
+END
+radius_polygon_present_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/radius_polygon_present_test.html
+END
+click_map_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/click_map_test.html
+END
+map_loaded_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/map_loaded_test.html
+END
+open_alerts_page_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/open_alerts_page_test.html
+END
+alert_marker_present_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/alert_marker_present_test.html
+END
+radius_slider_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/radius_slider_test.html
+END
+category_select_test.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/4/trunk/tptaarings/tests/selenium/alerts/category_select_test.html
+END

@@ -1,0 +1,63 @@
+stdClass Object
+(
+    [filename] => bad5dec3-05b6-49ab-b7f4-36d51d7605f0
+    [categoriesList] => Array
+        (
+            [0] => 124
+            [1] => 124
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-18 07:46:00
+            [Descript] => building without permit at mitso 
+            [dateSubmitReport] => 2013-10-19 13:19:22
+            [idForm] => 44
+            [SimCardSn] => 89233020500073533891
+            [Title] => unauthorized development 
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -1.5476700830429984
+            [lat] => 6.6923622465731745
+            [name] => 
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => kwame 
+            [email] => badu@tm.com
+            [lastName] => badu
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] =>  Commercial
+                    [id] => 676
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] =>  filling station
+                    [id] => 677
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] =>  Commercial
+                    [id] => 676
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] =>  filling station
+                    [id] => 677
+                )
+
+        )
+
+    [extname] => jpg
+)

@@ -1,0 +1,650 @@
+stdClass Object
+(
+    [filename] => 67d6a087-0cfa-47a0-8a48-70a9a44a63a7
+    [categoriesList] => Array
+        (
+            [0] => 152
+            [1] => 152
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-09-27 12:18:00
+            [Descript] => school survey facility
+            [dateSubmitReport] => 2013-09-27 12:26:55
+            [idForm] => 43
+            [Title] => mapping of school 
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => -0.175174
+            [lat] => 5.559556
+            [name] => la
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => ben
+            [email] => alwaysben200@gmail.com
+            [lastName] => lartey
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => 2013827
+                    [id] => 613
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 615
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] => tenashie junior high school
+                    [id] => 616
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 617
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 619
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 620
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 621
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] => sachet water
+                    [id] => 625
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] => Public
+                    [id] => 623
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => Headteacher
+                    [id] => 624
+                )
+
+            [10] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 626
+                )
+
+            [11] => stdClass Object
+                (
+                    [value] => Storage tank
+                    [id] => 627
+                )
+
+            [12] => stdClass Object
+                (
+                    [value] => collection service
+                    [id] => 628
+                )
+
+            [13] => stdClass Object
+                (
+                    [value] => Public
+                    [id] => 629
+                )
+
+            [14] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 630
+                )
+
+            [15] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 631
+                )
+
+            [16] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 632
+                )
+
+            [17] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 633
+                )
+
+            [18] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 635
+                )
+
+            [19] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 636
+                )
+
+            [20] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 637
+                )
+
+            [21] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 638
+                )
+
+            [22] => stdClass Object
+                (
+                    [value] => Traditional Pit
+                    [id] => 639
+                )
+
+            [23] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 640
+                )
+
+            [24] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 641
+                )
+
+            [25] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 642
+                )
+
+            [26] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 644
+                )
+
+            [27] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 647
+                )
+
+            [28] => stdClass Object
+                (
+                    [value] => Neatly kept
+                    [id] => 648
+                )
+
+            [29] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 649
+                )
+
+            [30] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 650
+                )
+
+            [31] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 651
+                )
+
+            [32] => stdClass Object
+                (
+                    [value] => Very convenient
+                    [id] => 652
+                )
+
+            [33] => stdClass Object
+                (
+                    [value] => Yes 
+                    [id] => 653
+                )
+
+            [34] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 654
+                )
+
+            [35] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 655
+                )
+
+            [36] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 656
+                )
+
+            [37] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 657
+                )
+
+            [38] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 658
+                )
+
+            [39] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 659
+                )
+
+            [40] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 660
+                )
+
+            [41] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 661
+                )
+
+            [42] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 662
+                )
+
+            [43] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 663
+                )
+
+            [44] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 664
+                )
+
+            [45] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 665
+                )
+
+            [46] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 666
+                )
+
+            [47] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 667
+                )
+
+            [48] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 668
+                )
+
+            [49] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 669
+                )
+
+            [50] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 671
+                )
+
+            [51] => stdClass Object
+                (
+                    [value] => 2013827
+                    [id] => 613
+                )
+
+            [52] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 615
+                )
+
+            [53] => stdClass Object
+                (
+                    [value] => tenashie junior high school
+                    [id] => 616
+                )
+
+            [54] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 617
+                )
+
+            [55] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 619
+                )
+
+            [56] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 620
+                )
+
+            [57] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 621
+                )
+
+            [58] => stdClass Object
+                (
+                    [value] => sachet water
+                    [id] => 625
+                )
+
+            [59] => stdClass Object
+                (
+                    [value] => Public
+                    [id] => 623
+                )
+
+            [60] => stdClass Object
+                (
+                    [value] => Headteacher
+                    [id] => 624
+                )
+
+            [61] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 626
+                )
+
+            [62] => stdClass Object
+                (
+                    [value] => Storage tank
+                    [id] => 627
+                )
+
+            [63] => stdClass Object
+                (
+                    [value] => collection service
+                    [id] => 628
+                )
+
+            [64] => stdClass Object
+                (
+                    [value] => Public
+                    [id] => 629
+                )
+
+            [65] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 630
+                )
+
+            [66] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 631
+                )
+
+            [67] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 632
+                )
+
+            [68] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 633
+                )
+
+            [69] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 635
+                )
+
+            [70] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 636
+                )
+
+            [71] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 637
+                )
+
+            [72] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 638
+                )
+
+            [73] => stdClass Object
+                (
+                    [value] => Traditional Pit
+                    [id] => 639
+                )
+
+            [74] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 640
+                )
+
+            [75] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 641
+                )
+
+            [76] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 642
+                )
+
+            [77] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 644
+                )
+
+            [78] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 647
+                )
+
+            [79] => stdClass Object
+                (
+                    [value] => Neatly kept
+                    [id] => 648
+                )
+
+            [80] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 649
+                )
+
+            [81] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 650
+                )
+
+            [82] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 651
+                )
+
+            [83] => stdClass Object
+                (
+                    [value] => Very convenient
+                    [id] => 652
+                )
+
+            [84] => stdClass Object
+                (
+                    [value] => Yes 
+                    [id] => 653
+                )
+
+            [85] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 654
+                )
+
+            [86] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 655
+                )
+
+            [87] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 656
+                )
+
+            [88] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 657
+                )
+
+            [89] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 658
+                )
+
+            [90] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 659
+                )
+
+            [91] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 660
+                )
+
+            [92] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 661
+                )
+
+            [93] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 662
+                )
+
+            [94] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 663
+                )
+
+            [95] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 664
+                )
+
+            [96] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 665
+                )
+
+            [97] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 666
+                )
+
+            [98] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 667
+                )
+
+            [99] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 668
+                )
+
+            [100] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 669
+                )
+
+            [101] => stdClass Object
+                (
+                    [value] => Yes
+                    [id] => 671
+                )
+
+        )
+
+    [extname] => jpg
+)

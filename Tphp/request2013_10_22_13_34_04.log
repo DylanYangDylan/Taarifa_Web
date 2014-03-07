@@ -1,0 +1,104 @@
+stdClass Object
+(
+    [filename] => 8b4b33ba-a32a-45a0-915c-1570f373179b
+    [categoriesList] => Array
+        (
+            [0] => 172
+        )
+
+    [mainReport] => stdClass Object
+        (
+            [ReportDate] => 2013-10-22 12:49:00
+            [Descript] => Nartey 
+            [dateSubmitReport] => 2013-10-22 13:34:03
+            [idForm] => 44
+            [SimCardSn] => 89233020500073533891
+            [Title] => Rapheal 
+        )
+
+    [location] => stdClass Object
+        (
+            [lng] => 0.1038179960541172
+            [lat] => 5.724004016339319
+            [name] => police Station land
+        )
+
+    [user] => stdClass Object
+        (
+            [firstName] => kofi
+            [email] => ky
+            [lastName] => Yeboah
+        )
+
+    [additionReport] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [value] => Residential
+                    [id] => 676
+                )
+
+            [1] => stdClass Object
+                (
+                    [value] => Dwelling
+                    [id] => 677
+                )
+
+            [2] => stdClass Object
+                (
+                    [value] => Footing
+                    [id] => 678
+                )
+
+            [3] => stdClass Object
+                (
+                    [value] => Without Permit
+                    [id] => 679
+                )
+
+            [4] => stdClass Object
+                (
+                    [value] => 2013922
+                    [id] => 680
+                )
+
+            [5] => stdClass Object
+                (
+                    [value] => Work in Progress
+                    [id] => 681
+                )
+
+            [6] => stdClass Object
+                (
+                    [value] => Rapheal Nartey
+                    [id] => 682
+                )
+
+            [7] => stdClass Object
+                (
+                    [value] => Schemed Area
+                    [id] => 683
+                )
+
+            [8] => stdClass Object
+                (
+                    [value] => Single Storey
+                    [id] => 684
+                )
+
+            [9] => stdClass Object
+                (
+                    [value] => 
+                    [id] => 685
+                )
+
+            [10] => stdClass Object
+                (
+                    [value] =>  Submitted
+                    [id] => 686
+                )
+
+        )
+
+    [extname] => jpg
+)

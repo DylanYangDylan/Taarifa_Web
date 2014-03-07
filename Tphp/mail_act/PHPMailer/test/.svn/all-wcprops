@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test
+END
+test_callback.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test/test_callback.php
+END
+testbootstrap-dist.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test/testbootstrap-dist.php
+END
+phpmailerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test/phpmailerTest.php
+END
+phpmailerLangTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test/phpmailerLangTest.php
+END
+fakesendmail.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/184/trunk/tptaarings/Tphp/mail_act/PHPMailer/test/fakesendmail.sh
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha
+END
+Math.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Math.php
+END
+Word.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Word.php
+END
+Black.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Black.php
+END
+Basic.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Basic.php
+END
+Riddle.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Riddle.php
+END
+Alpha.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/4/trunk/tptaarings/system/libraries/drivers/Captcha/Alpha.php
+END
