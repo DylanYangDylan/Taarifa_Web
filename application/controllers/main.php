@@ -195,16 +195,17 @@ class Main_Controller extends Template_Controller {
 		// Map and Slider Blocks
 		$div_map = new View('main_map');
 		$div_timeline = new View('main_timeline');
-		
+		$div_msg_table = new View('msg_table');
 		// Filter::map_main - Modify Main Map Block
 		Event::run('ushahidi_filter.map_main', $div_map);
 		
 		// Filter::map_timeline - Modify Main Map Block
 		Event::run('ushahidi_filter.map_timeline', $div_timeline);
-		
+		Event::run('ushahidi_filter.detail_report', $div_msg_table );
 		$this->template->content->div_map = $div_map;
+		//print_r($div_map);
 		$this->template->content->div_timeline = $div_timeline;
-
+		$this->template->content->div_msg_table = $div_msg_table ;
 		// Check if there is a site message
 		$this->template->content->site_message = '';
 		$site_message = trim(Kohana::config('settings.site_message'));

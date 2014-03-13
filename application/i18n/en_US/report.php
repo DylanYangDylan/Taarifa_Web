@@ -55,7 +55,7 @@
 		'url' => 'The news source links field does not appear to contain a valid URL?',
 	),
 	'incident_photo' => array(
-		'size' => 'Please ensure that photo uploads sizes are limited to 2MB.',
+		'size' => 'Please ensure that photo uploads sizes are limited to 5MB.',
 		'type' => 'The Upload Photos field does not appear to contain a valid image. The only accepted formats are .JPG, .PNG and .GIF.',
 		'valid' => 'The Upload Photos field does not appear to contain a valid file',
 	),

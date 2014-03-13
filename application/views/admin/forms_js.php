@@ -42,7 +42,7 @@ function formAction ( action, confirmAction, id )
 		
 	if (answer){
 		// Set Submit Type
-		$("#action_" + id).attr("value", action);		
+		$("#action_" + id).attr("value", action);
 		
 		// Submit Form
 		$("#form_action_" + id).submit();			
@@ -50,6 +50,16 @@ function formAction ( action, confirmAction, id )
 	} else{
 		return false;
 	}
+}
+
+// Generate a copy of the current form
+// as a starting point for a new form
+function copyForm(id)
+{
+  $("#action_" + id).attr("value", "copy");
+
+  // Submit Form
+  $("#form_action_" + id).submit();
 }
 
 // Show Function

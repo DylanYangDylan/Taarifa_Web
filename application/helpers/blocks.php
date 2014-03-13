@@ -18,7 +18,8 @@ class blocks_Core {
 	{
 		if ($id)
 		{
-			echo "<li id=\"block-".$id."\"><div class=\"content-block\">";
+			echo "<li id=\"block-".$id."\" style=\"width:100%\"><div class=\"content-block\" >";
+			
 		}
 		else
 		{
@@ -46,7 +47,7 @@ class blocks_Core {
 	{
 		if ($title)
 		{
-			echo "<h5>$title</h5>";
+			echo "<h5 style=\"color:#8f8f8f\">$title</h5>";
 		}
 	}
 	

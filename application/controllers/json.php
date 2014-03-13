@@ -54,8 +54,11 @@ class Json_Controller extends Template_Controller
 		$json = "";
 		$json_item = "";
 		$json_array = array();
+		/*--------Dylan--------
 		$color = Kohana::config('settings.default_map_all');
+		--------Dylan--------*/
 		$icon = "";
+		$FinishedIcon = "./media/img/finished.png";
 
 		$media_type = (isset($_GET['m']) AND intval($_GET['m']) > 0)? intval($_GET['m']) : 0;
 		
@@ -71,7 +74,7 @@ class Json_Controller extends Template_Controller
 		
 		// Fetch the incidents
 		$markers = (isset($_GET['page']) AND intval($_GET['page']) > 0)? reports::fetch_incidents(TRUE) : reports::fetch_incidents();
-		
+
 		// Variable to store individual item for report detail page
 		$json_item_first = "";	
 		foreach ($markers as $marker)
@@ -99,7 +102,18 @@ class Json_Controller extends Template_Controller
 			$json_item .= "\"type\":\"Feature\",";
 			$json_item .= "\"properties\": {";
 			$json_item .= "\"id\": \"".$marker->incident_id."\", \n";
-
+			
+			/*--------Dylan--------*/
+			if (!Category_Model::is_valid_category($category_id))
+			{
+				if($marker->email_send==0){
+					$color = Kohana::config('settings.default_map_all');
+				}else{
+					$color = "fafa00";
+				}
+			}
+			/*--------Dylan--------*/
+			
 			$encoded_title = utf8tohtml::convert($marker->incident_title, TRUE);
 			$encoded_title = str_ireplace('"','&#34;',$encoded_title);
 			$encoded_title = json_encode($encoded_title);
@@ -140,7 +154,43 @@ class Json_Controller extends Template_Controller
 				$json_item = implode(",", $geometry);
 				array_push($json_array, $json_item);
 			}
+			
+			// TTP Plug Finished
+			if( $marker->incident_status == "5" )
+			{
+				$json_item = "{";
+				$json_item .= "\"type\":\"Feature\",";
+				$json_item .= "\"properties\": {";
+				$json_item .= "\"id\": \"".$marker->incident_id."\", \n";
+	
+				$encoded_title = utf8tohtml::convert($marker->incident_title, TRUE);
+				$encoded_title = str_ireplace('"','&#34;',$encoded_title);
+				$encoded_title = json_encode($encoded_title);
+				$encoded_title = str_ireplace('"', '', $encoded_title);
+	
+				$json_item .= "\"name\":\"" . str_replace(chr(10), ' ', str_replace(chr(13), ' ', "<a "
+						. "href='".url::base()."reports/view/".$marker->incident_id."'>".$encoded_title)."</a>") . "\","
+						. "\"link\": \"".url::base()."reports/view/".$marker->incident_id."\", ";
+	
+				$json_item .= (isset($category))
+					? "\"category\":[" . $category_id . "], "
+					: "\"category\":[0], ";
+	
+				$json_item .= "\"color\": \"".$color."\", \n";
+				$json_item .= "\"icon\": \"".$FinishedIcon."\", \n";
+				$json_item .= "\"thumb\": \"".$thumb."\", \n";
+				$json_item .= "\"timestamp\": \"" . strtotime($marker->incident_date) . "\"";
+				$json_item .= "},";
+				$json_item .= "\"geometry\": {";
+				$json_item .= "\"type\":\"Point\", ";
+				$json_item .= "\"coordinates\":[" . $marker->longitude . ", " . $marker->latitude . "]";
+				$json_item .= "}";
+				$json_item .= "}";
+				
+				array_push($json_array, $json_item);
+			}
 		}
+
 		
 		if ($json_item_first)
 		{

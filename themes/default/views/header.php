@@ -8,6 +8,7 @@
 	// Action::header_scripts - Additional Inline Scripts from Plugins
 	Event::run('ushahidi_action.header_scripts');
 	?>
+      
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 
@@ -33,6 +34,8 @@
   echo '<body id="page" class="'.$body_class.'" />';
   
 ?>
+	<div class="outer">
+	
 	<!-- wrapper -->
 	<div class="rapidxwpr floatholder">
 
@@ -64,14 +67,16 @@
 			<!-- / searchbox -->
 			
 			<!-- logo -->
+			
 			<?php if($banner == NULL){ ?>
-			<div id="logo">
-				<h1><a href="<?php echo url::site();?>"><?php echo $site_name; ?></a></h1>
-				<span><?php echo $site_tagline; ?></span>
-			</div>
+				<div id="logo">
+					<h1><a href="<?php echo url::site();?>"><?php echo $site_name; ?></a></h1>
+					<span><?php echo $site_tagline; ?></span>
+				</div>
 			<?php }else{ ?>
-			<a href="<?php echo url::site();?>"><img src="<?php echo $banner; ?>" alt="<?php echo $site_name; ?>" /></a>
+				<a href="<?php echo url::site();?>"><img src="<?php echo $banner; ?>" alt="<?php echo $site_name; ?>" style="position:relative;left:-14px;"/></a>
 			<?php } ?>
+			
 			<!-- / logo -->
 			
 			<!-- submit incident -->

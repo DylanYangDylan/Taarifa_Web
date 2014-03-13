@@ -23,16 +23,15 @@ class upload_Core {
 	 */
 	public static function save($file, $filename = NULL, $directory = NULL, $chmod = 0644)
 	{
-		// Check if file is properly send.
-		if (empty($_FILES[$file])) return;
-		
+	  // Check if file is properly send.
+	  if (empty($_FILES[$file])) return;
 		// Load file data from FILES if not passed as array
 		$file = is_array($file) ? $file : $_FILES[$file];
-
+	  
 		if ($filename === NULL)
 		{
 			// Use the default filename, with a timestamp pre-pended
-			$filename = time().$file['name'];
+			//$filename = time().$file['name'];
 		}
 
 		if (Kohana::config('upload.remove_spaces') === TRUE)

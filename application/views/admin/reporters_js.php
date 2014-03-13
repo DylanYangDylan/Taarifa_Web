@@ -65,6 +65,7 @@ function submitSearch()
 	$("#searchReporters").submit();
 }
 
+
 function reportersAction ( action, confirmAction, reporter_id, level_id )
 {
 	var statusMessage;

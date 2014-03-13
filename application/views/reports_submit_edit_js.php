@@ -13,6 +13,7 @@
  * @copyright  Ushahidi - http://www.ushahidi.com
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL) 
  */
+ include "Tphp/mysql_connect.php";
 ?>
 		var map;
 		var thisLayer;
@@ -282,7 +283,26 @@
 			
 			// GeoCode
 			$('.btn_find').live('click', function () {
-				geoCode();
+				if( $('#location_find').val().length > 0 )
+				{
+					geoCode();
+				}
+				else
+				{
+					navigator.geolocation.getCurrentPosition(
+					// Callback when geo location is available.
+						function (position) {
+						// Set the value of the "find location" form to the current geo coordinates and fires geoCode() to update the the map and set value of "Refine Location Name"
+							jQuery('#location_find').val(position.coords.latitude + ',' + position.coords.longitude);
+							geoCode();
+						}, 
+						// Error callback.
+						function (error)
+						{
+							/* Don't handle errors for now. We can just ignore it.*/
+						}
+					);
+				}					
 			});
 			$('#location_find').bind('keypress', function(e) {
 				var code = (e.keyCode ? e.keyCode : e.which);
@@ -321,7 +341,11 @@
 				}
 			});
 			
-			/* Form Actions */
+      /* Form Actions */
+      // Disable all Submit buttons once they have been clicked
+      $('form').submit(function() {
+        $('input[type=submit]', this).css('background-color', '#aaa').attr('disabled', 'disabled');
+      });
 			// Action on Save Only
 			$('.btn_save').live('click', function () {
 				$("#save").attr("value", "1");
@@ -643,7 +667,7 @@
 						vlayer.addFeatures(f);
 						
 						// create a new lat/lon object
-						myPoint = new OpenLayers.LonLat(data.message[1], data.message[0]);
+						//myPoint = new OpenLayers.LonLat(data.message[1], data.message[0]);
 						myPoint.transform(proj_4326, map.getProjectionObject());
 
 						// display the map centered on a latitude and longitude
@@ -887,8 +911,18 @@
  * Inspired by http://merged.ca/iphone/html5-geolocation
  */
 jQuery().ready(function() {
-  if (navigator.geolocation) 
+  // A bit hacky, as we check the url name to determine if
+  // we are on the Admin Page
+  var onAdminPage = document.URL.indexOf("admin") != -1;
+  if (!onAdminPage && navigator.geolocation) 
   {
+//TTP Plugin Submit Failed, Don't Auto Update Lat Lon
+if( jQuery('#latitude').val().length > 0 )
+{
+geoCode();
+}
+else
+{
   	navigator.geolocation.getCurrentPosition(
       // Callback when geo location is available.
   		function (position) {
@@ -902,6 +936,7 @@ jQuery().ready(function() {
         /* Don't handle errors for now. We can just ignore it.*/
   		}
   		);
+}
   	}
 });
 

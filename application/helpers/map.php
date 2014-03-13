@@ -145,6 +145,7 @@ class map_Core {
 				}
 			}
 		}
+		 
 		$js .= "]";
 		
 		return $js;

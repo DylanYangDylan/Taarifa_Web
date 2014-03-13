@@ -1,6 +1,7 @@
 <div id="custom_forms">
 					
      <?php
+	 
 	foreach ($disp_custom_fields as $field_id => $field_property)
 	{
 		// Is the field required
@@ -14,23 +15,23 @@
 			: '';
 		
 		// Workaround for situations where admin can view, but doesn't have suff. perms to edit.
-		if (isset($custom_field_mismatch))
-		{
-			if(isset($custom_field_mismatch[$field_id]))
-			{
-				if (isset($form['custom_field'][$field_id]))
-				{
-					echo $form['custom_field'][$field_id];
-				}
-				else
-				{
-					echo "no data";
-				}
+		// if (isset($custom_field_mismatch))
+		// {
+			// if(isset($custom_field_mismatch[$field_id]))
+			// {
+				// if (isset($form['custom_field'][$field_id]))
+				// {
+					// echo $form['custom_field'][$field_id];
+				// }
+				// else
+				// {
+					// echo "no data";
+				// }
 				
-				echo "</div>";
-				continue;
-			}
-		}
+				// echo "</div>";
+				// continue;
+			// }
+		// }
 
 		// Give all the elements an id so they can be accessed easily via javascript
 		$id_name = 'id="custom_field_'.$field_id.'"';
@@ -148,6 +149,7 @@
 
 			$options = explode(',',$defaults[0]);
 			$html ='';	
+			 
 			switch ($field_property['field_type'])
 			{
 				case 5:

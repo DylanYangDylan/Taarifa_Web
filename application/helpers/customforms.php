@@ -18,6 +18,12 @@ class customforms_Core {
 		$custom_forms = ORM::factory('form')->find_all();
 		return $custom_forms;
 	}
+	
+	public static function get_custom_ggroup()
+	{
+		$custom_forms = ORM::factory('GGroup')->find_all();
+		return $custom_forms;
+	}
 
 	/**
 	 * Retrieve Custom Form Fields

@@ -21,7 +21,7 @@ class admin_Core {
 
 			return array(
 				'mhi' => Kohana::lang('ui_admin.mhi'),
-				'stats' => Kohana::lang('ui_admin.stats'),
+				'stats' => Kohana::lang('ui_admin.stats'),	
 				'manage/pages' => Kohana::lang('ui_main.pages')
 			);
 		}
@@ -122,6 +122,10 @@ class admin_Core {
 
 		$menu .= ($this_sub_page == "upload") ? Kohana::lang('ui_main.upload_reports') : "<a href=\"".url::base()."admin/reports/upload\">".Kohana::lang('ui_main.upload_reports')."</a>";
 
+		$menu .= ($this_sub_page == "hide") ? Kohana::lang('ui_main.hide_reports') : "<a href=\"".url::base()."admin/reports/hide\">".Kohana::lang('ui_main.hide_reports')."</a>";
+		
+		$menu .= ($this_sub_page == "group") ? Kohana::lang('ui_main.group_reports') : "<a href=\"".url::base()."admin/reports/group\">".Kohana::lang('ui_main.group_reports')."</a>";
+		
 		echo $menu;
 		
 		// Action::nav_admin_reports - Add items to the admin reports navigation tabs

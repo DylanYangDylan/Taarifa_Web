@@ -1,4 +1,5 @@
 <?php
+ini_set("memory_limit", "1024M"); 
 /**
  * This file acts as the "front controller" to your application. You can
  * configure your application, modules, and system directories here.

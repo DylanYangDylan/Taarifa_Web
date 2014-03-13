@@ -23,7 +23,7 @@ class Themes_Core {
 	public $treeview_enabled = false;
 	public $validator_enabled = false;
 	public $photoslider_enabled = false;
- 	public $offline_capability = true;
+	public $offline_capability = false;
 	public $videoslider_enabled = false;
 	public $colorpicker_enabled = false;
 	public $site_style = false;
@@ -87,6 +87,11 @@ class Themes_Core {
 		{
 			$core_css .= html::stylesheet($this->css_url."media/css/picbox/picbox","",true);
 		}
+
+		if ($this->offline_capability)
+		{
+			$core_css .= html::stylesheet($this->css_url."media/css/offlineData","",true);
+		}
 		
 		if ($this->videoslider_enabled)
 		{
@@ -120,12 +125,11 @@ class Themes_Core {
 			$core_js .= html::script($this->js_url."media/js/OpenLayers", true);
 			$core_js .= "<script type=\"text/javascript\">OpenLayers.ImgPath = '".$this->js_url."media/img/openlayers/"."';</script>";
 		}
-		
 		$core_js .= html::script($this->js_url."media/js/jquery", true);
 		//$core_js .= html::script($this->js_url."media/js/jquery.ui.min", true);
 		$core_js .= html::script("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js", true);
 		$core_js .= html::script($this->js_url."media/js/jquery.pngFix.pack", true);
-		
+				
 		if ($this->map_enabled)
 		{
 			$core_js .= $this->api_url;
@@ -137,6 +141,9 @@ class Themes_Core {
 
 			if ($this->main_page)
 			{
+//TTP Plugin Add google chart API
+$core_js .= html::script($this->js_url."media/js/google.jsapi", true);
+				
 				$core_js .= html::script($this->js_url."media/js/jquery.flot", true);
 				$core_js .= html::script($this->js_url."media/js/timeline", true);
 				$core_js .= "<!--[if IE]>".html::script($this->js_url."media/js/excanvas.min", true)."<![endif]-->";
@@ -157,10 +164,11 @@ class Themes_Core {
 		{
 			$core_js .= html::script($this->js_url."media/js/picbox", true);
 		}
+
 		if ($this->offline_capability)
 		{
-			$core_js .= html::script($this->js_url."media/js/offlineform.jquery", true);
-	 	}
+		  $core_js .= html::script($this->js_url."media/js/offlineData", true);
+		}
 
 		if($this->videoslider_enabled )
 		{
@@ -185,7 +193,7 @@ class Themes_Core {
 		$inline_js = "<script type=\"text/javascript\">
                         <!--//
 function runScheduler(img){img.onload = null;img.src = '".url::site().'scheduler'."';}
-			".'$(document).ready(function(){$(document).pngFix(); $("#reportForm").offlineForm(); });'.$this->js.
+			".'$(document).ready(function(){$(document).pngFix();});'.$this->js.
                         "//-->
                         </script>";
 		
@@ -235,6 +243,7 @@ function runScheduler(img){img.onload = null;img.src = '".url::site().'scheduler
 		$languages = "";
 		$languages .= "<div class=\"language-box\">";
 		$languages .= "<form action=\"\">";
+		$languages .= "<span class=\"slelangBG\"><span class=\"slelangHid\">";
 		
 		/**
 		 * E.Kala - 05/01/2011
@@ -256,7 +265,8 @@ function runScheduler(img){img.onload = null;img.src = '".url::site().'scheduler
 		natcasesort($locales);
 
 		$languages .= form::dropdown('l', $locales, Kohana::config('locale.language'),
-			' onchange="this.form.submit()" ');
+			' onchange="this.form.submit()" class="selectorlang" ');
+		$languages .= "</span></span>";
 		$languages .= "</form>";
 		$languages .= "</div>";
 		
@@ -288,7 +298,8 @@ function runScheduler(img){img.onload = null;img.src = '".url::site().'scheduler
 		if (Kohana::config('settings.allow_reports'))
 		{
 			$btn .= "<div class=\"submit-incident clearingfix\">";
-			$btn .= "<a href=\"".url::site()."reports/submit"."\">".Kohana::lang('ui_main.submit')."</a>";
+			//$btn .= "<a href=\"".url::site()."reports/submit"."\">".Kohana::lang('ui_main.submit')."</a>";
+			$btn .= "<a href=\"".url::site()."reports/submit"."\"><input type='button' class='btn_submit' /></a>";
 			$btn .= "</div>";
 		}
 		

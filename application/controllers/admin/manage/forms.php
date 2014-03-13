@@ -56,7 +56,6 @@ class Forms_Controller extends Admin_Controller {
 		if( $_POST ) 
 		{
 			$post = Validation::factory( $_POST );
-			
 			 //  Add some filters
 	        $post->pre_filter('trim', TRUE);
 	
@@ -100,6 +99,32 @@ class Forms_Controller extends Admin_Controller {
 						$form_action = strtoupper(Kohana::lang('ui_admin.modified'));
 					}
 				}
+        elseif($post->action == 'copy')
+        {
+          // Copy the form ...
+          $form_to_copy = ORM::factory('form', $form_id);
+          $new_form = ORM::factory('form');
+          $new_form = $this->create_db_entry_copy($form_to_copy, $new_form);
+          $new_form->form_title = $new_form->form_title . "(copy)";
+          $new_form->save();
+
+          // ... the form fields ...
+          foreach($form_to_copy->form_field as $field) {
+            $new_field = ORM::factory('form_field');
+            $new_field = $this->create_db_entry_copy($field, $new_field);
+            $new_field->form_id = $new_form->id; // connect the field to the new form
+            $new_field->save();
+            // ... and their options.
+            foreach($field->form_field_options as $option) {
+              $new_option = ORM::factory('form_field_option');
+              $new_option = $this->create_db_entry_copy($option, $new_option);
+              $new_option->form_field_id = $new_field->id;
+              $new_option->save();
+            }
+          }
+          $form_saved = TRUE;
+          $form_action = strtoupper(Kohana::lang('ui_admin.copied'));
+        }
 				else
 				{
 					// Save Action
@@ -167,7 +192,20 @@ class Forms_Controller extends Admin_Controller {
 		$this->template->form_error = $form_error;
 	}
 
-	
+  /**
+   * Copies the db object. Needs to supply the prototype
+   * of the new object
+   */
+  private function create_db_entry_copy($obj_to_copy, $new_obj){
+    $val_array = $obj_to_copy->as_array();
+    array_shift($val_array); // To remove ID
+
+    foreach($val_array as $key => $value){
+      $new_obj->$key = $value;
+    }
+    return $new_obj;
+  }
+
 	/**
 	* Generates Form Field Entry Form (Add/Edit) via Ajax Request
     */
@@ -357,14 +395,12 @@ class Forms_Controller extends Admin_Controller {
 		
 		if ($field_id > 0 AND $form_id > 0)
 		{
-            // The following is backported from latest Ushahidi
-            // START ->
+            // Cherry-picked from Ushahidi - fixes issue #27
             $form_field = ORM::factory('form_field', $field_id);
             if ($form_field->loaded)
             {
                 $form_field->delete();
             }
-            // -> END
 			$return_content = customforms::get_current_fields($form_id,$this->user);
 		}
 		
@@ -413,8 +449,9 @@ class Forms_Controller extends Admin_Controller {
 				{
 					// Move down the fields whose position value is greater
 					// than that of the selected field 
-					$sql = "UPDATE %sform_field SET field_position = field_position + 1 WHERE id != %d";
-					$this->db->query(sprintf($sql, $this->table_prefix, $field_id));
+                    // Cherry-picked from Ushahidi to fix Github issue #29
+                    $sql = "UPDATE %sform_field SET field_position = %d WHERE field_position = %d";
+                    $this->db->query(sprintf($sql, $this->table_prefix, $current_position, $current_position-1));
 
 					// Move the selected field upwards
 					$field->field_position = $current_position - 1;
@@ -423,8 +460,9 @@ class Forms_Controller extends Admin_Controller {
 				elseif ($field_position == 'd' AND $current_position != $total_fields)
 				{ 
 					// Move all other form fields upwards
-					$sql = "UPDATE %sform_field SET field_position = field_position - 1 WHERE id != %d";
-					$this->db->query(sprintf($sql, $this->table_prefix, $field_id));
+					// Cherry-picked from Ushahidi to fix Github issue #29
+                    $sql = "UPDATE %sform_field SET field_position = %d WHERE field_position = %d";
+                    $this->db->query(sprintf($sql, $this->table_prefix,  $current_position, $current_position + 1));
 					
 					// Move the selected field downwards - increase its field position in the database
 					$field->field_position = $current_position + 1;
@@ -981,7 +1019,7 @@ class Forms_Controller extends Admin_Controller {
 		$html .="        	$('#formadd_".$form_id."').hide(300);";
 		$html .="        	$('#form_fields_".$form_id."').hide();";
 		$html .="        	$('#form_fields_current_".$form_id."').html('');";
-		$html .="        	$('#form_fields_current_".$form_id."').html(unescape(data.response));";
+		$html .="        	$('#form_fields_current_".$form_id."').html(decodeURIComponent(data.response));";
 		$html .="        	$('#form_fields_current_".$form_id."').effect(\"highlight\", {}, 2000);";
 		$html .="        };";
 		$html .="    } ";

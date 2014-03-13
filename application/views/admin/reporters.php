@@ -221,20 +221,7 @@
 													<?php echo $service_name; ?>
 												</div>
 											</td>
-											<td class="col-4">
-												<ul>
-													<li class="none-separator"><a href="#add" onClick="fillFields(
-	'<?php echo(rawurlencode($reporter_id)); ?>',
-	'<?php echo(rawurlencode($level_id)); ?>',
-	'<?php echo(rawurlencode($service_name)); ?>',
-	'<?php echo(rawurlencode($reporter->service_account)); ?>',
-	'<?php echo(rawurlencode($location_id)); ?>',
-	'<?php echo(rawurlencode($location_name)); ?>',	
-	'<?php echo(rawurlencode($latitude)); ?>',
-	'<?php echo(rawurlencode($longitude)); ?>')"><?php echo Kohana::lang('ui_main.edit');?></a></li>
-													<li><a href="javascript:reportersAction('d','DELETE','<?php echo(rawurlencode($reporter_id)); ?>', '')" class="del"><?php echo Kohana::lang('ui_main.delete');?></a></li>
-												</ul>
-											</td>
+											
 										</tr>
 										<?php
 									}
