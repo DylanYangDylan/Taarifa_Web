@@ -239,6 +239,7 @@ class form_Core {
 	 */
 	public static function dropdown($data, $options = NULL, $selected = NULL, $extra = '')
 	{
+
 		if ( ! is_array($data))
 		{
 			$data = array('name' => $data);

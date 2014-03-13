@@ -47,7 +47,6 @@ class Reports_Controller extends Main_Controller {
 		
 		// Enable the map
 		$this->themes->map_enabled = TRUE;
-		$this->themes->offline_capability = TRUE;
 		
 		// Set the latitude and longitude
 		$this->themes->js->latitude = Kohana::config('settings.default_lat');
@@ -259,8 +258,6 @@ class Reports_Controller extends Main_Controller {
 		$this->template->api_url = Kohana::config('settings.api_url');
 
 		// Setup and initialize form field names
-		
-		
 		$form = array(
 			'incident_title' => '',
 			'incident_description' => '',
@@ -283,8 +280,7 @@ class Reports_Controller extends Main_Controller {
 			'person_last' => '',
 			'person_email' => '',
 			'form_id'	  => '',
-			'custom_field' => array(),
-			'location_find' => ''
+			'custom_field' => array()
 		);
 		
 		// Copy the form as errors, so the errors will be stored with keys corresponding to the form field names
@@ -292,7 +288,7 @@ class Reports_Controller extends Main_Controller {
 		$form_error = FALSE;
 
 		$form_saved = ($saved == 'saved');
-	
+
 		// Initialize Default Values
 		$form['incident_date'] = date("m/d/Y",time());
 		$form['incident_hour'] = date('g');
@@ -316,14 +312,6 @@ class Reports_Controller extends Main_Controller {
 		
 		$this->template->content->forms = $forms;
 		
-		//GET custom forms
-		$ggroup = array();
-		foreach (customforms::get_custom_ggroup() as $custom_forms)
-		{
-			$ggroup[$custom_forms->id] = $custom_forms->GGroup_Name;
-		}
-		
-		$this->template->content->ggroup = $ggroup;		
 
 		// Check, has the form been submitted, if so, setup validation
 		if ($_POST)
@@ -334,6 +322,7 @@ class Reports_Controller extends Main_Controller {
 			// Test to see if things passed the rule checks
 			if (reports::validate($post))
 			{
+				
 				// STEP 1: SAVE LOCATION
 				$location = new Location_Model();
 				reports::save_location($post, $location);
@@ -344,12 +333,12 @@ class Reports_Controller extends Main_Controller {
 
 				// STEP 2b: SAVE INCIDENT GEOMETRIES
 				reports::save_report_geometry($post, $incident);
-				echo "c";
+				
 				// STEP 3: SAVE CATEGORIES
 				reports::save_category($post, $incident);
 
 				// STEP 4: SAVE MEDIA
-				@reports::save_media($post, $incident);
+				reports::save_media($post, $incident);
 
 				// STEP 5: SAVE CUSTOM FORM FIELDS
 				reports::save_custom_fields($post, $incident);
@@ -363,7 +352,10 @@ class Reports_Controller extends Main_Controller {
 				Event::run('ushahidi_action.report_submit', $post);
 
 				url::redirect('reports/thanks');
-			}else// No! We have validation errors, we need to show the form again, with the errors
+			}
+
+			// No! We have validation errors, we need to show the form again, with the errors
+			else
 			{
 				// Repopulate the form fields
 				$form = arr::overwrite($form, $post->as_array());
@@ -372,11 +364,8 @@ class Reports_Controller extends Main_Controller {
 				$errors = arr::overwrite($errors, $post->errors('report'));
 				$form_error = TRUE;
 			}
-			$form['location_find'] = $_POST['location_find'];
-			echo "GO";
 		}
-//===============================POST=======================================
-      
+
 		// Retrieve Country Cities
 		$default_country = Kohana::config('settings.default_country');
 		$this->template->content->cities = $this->_get_cities($default_country);
@@ -406,7 +395,6 @@ class Reports_Controller extends Main_Controller {
 
 		// Javascript Header
 		$this->themes->map_enabled = TRUE;
-		$this->themes->offline_capability = TRUE;
 		$this->themes->datepicker_enabled = TRUE;
 		$this->themes->treeview_enabled = TRUE;
 		$this->themes->colorpicker_enabled = TRUE;
@@ -431,7 +419,6 @@ class Reports_Controller extends Main_Controller {
 		
 		// Rebuild Header Block
 		$this->template->header->header_block = $this->themes->header_block();
-		
 	}
 
 	 /**
@@ -455,8 +442,8 @@ class Reports_Controller extends Main_Controller {
 		else
 		{
 			$incident = ORM::factory('incident')
-				->where('id',$id) 
-				->where('incident_active',1) 
+				->where('id',$id)
+				->where('incident_active',1)
 				->find();
 			if ( $incident->id == 0 )	// Not Found
 			{

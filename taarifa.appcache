@@ -26,10 +26,8 @@ media/img/openlayers/zoom-plus-mini.png
 #style sheets
 media/css/jquery-ui-themeroller.css
 media/css/openlayers.css
-media/css/offlineData.css
 themes/default/css/style.css
 
-#one of the following files causes my chromium version to crash, disabled for now
 #style sheet images
 #media/css/img/pan-panel.png
 #media/css/img/save_features_off.png
@@ -109,7 +107,7 @@ http://www.openstreetmap.org/openlayers/OpenStreetMap.js
 media/js/selectToUISlider.jQuery.js
 media/js/jquery.flot.js
 media/js/timeline.js
-media/js/offlineData.js
+media/js/offlineform.jquery.js
 
 NETWORK:
 * 

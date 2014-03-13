@@ -439,7 +439,7 @@ class Reports_Controller extends Members_Controller {
 			}
 
 			// Validate photo uploads
-			$post->add_rules('incident_photo', 'upload::valid', 'upload::type[gif,jpg,png]', 'upload::size[5M]');
+			$post->add_rules('incident_photo', 'upload::valid', 'upload::type[gif,jpg,png]', 'upload::size[2M]');
 
 
 			// Validate Personal Information

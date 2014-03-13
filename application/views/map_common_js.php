@@ -109,10 +109,10 @@
 	function drawCircle(map, lat, lon, radius)
 	{
 		if (typeof map == 'undefined' || typeof map != 'object') return;
-	//	if (typeof radius == 'undefined')
-	//	{
-			radius = 10;
-	//	}
+		if (typeof radius == 'undefined')
+		{
+			radius = 20000;
+		}
 		
 		var radiusLayer;
 		radiusLayers = map.getLayersByName("Radius Layer");
@@ -132,13 +132,12 @@
 		
 		var circStyle = OpenLayers.Util.extend( {},OpenLayers.Feature.Vector.style["default"] );
 		var circleFeature = new OpenLayers.Feature.Vector(
-			//OpenLayers.Geometry.Polygon.createRegularPolygon( circOrigin, radius, 40, 0 ),
+			OpenLayers.Geometry.Polygon.createRegularPolygon( circOrigin, radius, 40, 0 ),
 			null,
 			circStyle
 		);
 		
 		radiusLayer.addFeatures( [circleFeature] );
-      
 	}
 	
 	function addFeatureSelectionEvents(map, layer) {

@@ -161,7 +161,6 @@ class category_Core {
 			. "INNER JOIN ".$table_prefix."incident i ON (ic.incident_id = i.id) "
 			. "WHERE (ic.category_id = c.id OR ic.category_id = c2.id) "
 			. "AND c.parent_id = c2.id "
-			. "AND i.enable = 1 "
 			. "AND i.incident_active = 1 "
 			. "AND c2.category_visible = 1 "
 			. "AND c.category_visible = 1 "
@@ -178,7 +177,6 @@ class category_Core {
 			{
 				// Update
 				$category_data[$category_total->id]['report_count'] = $category_total->report_count;
-				echo $category_total->report_count;
 			}
 		}
 		
@@ -188,12 +186,11 @@ class category_Core {
 			. "INNER JOIN ".$table_prefix."incident_category ic ON (ic.category_id = c.id) "
 			. "INNER JOIN ".$table_prefix."incident i ON (ic.incident_id = i.id) "
 			. "WHERE c.category_visible = 1 "
-			. "AND i.incident_active = 1 " 
+			. "AND i.incident_active = 1 "
 			. "GROUP BY c.category_title "
 			. "ORDER BY c.category_title ASC";
 		
 		// Add child categories
-		 
 		foreach ($db->query($sql) as $category)
 		{
 			// Extend the category data array
@@ -295,7 +292,6 @@ class category_Core {
 			. "INNER JOIN ".$table_prefix."incident i ON (ic.incident_id = i.id) "
 			. "WHERE c.category_visible = 1 "
 			. "AND i.incident_active = 1 "
-			. "AND i.enable = 1 "
 			. "AND c.parent_id = 0 "
 			. "GROUP BY c.id";
 		

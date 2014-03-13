@@ -52,7 +52,6 @@
 		this.graphData = [];
 		this.playCount = 0;
 		this.addMarkers = null;
-		this.addMarkers2 = null;
 	    
 		if (options)
 		{
@@ -94,7 +93,6 @@
 						}
 					};
 				}
-				//Flot Chart Draw  plot( Canvas, Data(Color, Array( Time,Count ),Label ), Extend )
 				plot = $.plot($("#"+this.elementId), [this.graphData],
 					$.extend(true, {}, this.graphOptions, customOptions));
 			}
@@ -193,7 +191,7 @@
 		{
 			window.clearTimeout(gTimelinePlayHandle);
 			gTimelinePlayHandle = null;
-			$('#playTimeline').html('');
+			$('#playTimeline').html('PLAY');
 			$('#playTimeline').parent().attr('class', 'play');
 			return this;
 		};
@@ -267,24 +265,19 @@
 				startTime: gStartTime, //new Date(plotData.data[0][0]),
 				endTime: gEndTime //new Date(plotData.data[plotData.data.length-1][0])
 			});
-			
 			playTimeline.plot();
 			gPlayEndDate = playTimeline.graphData.data[playTimeline.graphData.data.length-1][0] / 1000;
 			playTimeline.plotMarkers(style, markers, gPlayEndDate);
-			//playTimeline.plotMarkers(style, markers2, gPlayEndDate);
-			
 			this.playCount++;
 			if (this.playCount == data.length)
 			{
-				//$('#playTimeline').html('PLAY');
-				//$('#playTimeline').css('background-image','../images/A06.png');
+				$('#playTimeline').html('PLAY');
 				$('#playTimeline').parent().attr('class', 'play');
 				this.graphData = allGraphData;
 			} 
 			else
 			{
-				//$('#playTimeline').html('PAUSE');
-				//$('#playTimeline').css('background-image','../images/PAUSE.png');
+				$('#playTimeline').html('PAUSE');
 				$('#playTimeline').parent().attr('class', 'play pause');
 				gTimeline = this;
 				gTimelinePlayHandle = window.setTimeout("gTimeline.play('"+visualType+"')",500);
@@ -328,24 +321,18 @@
 			playTimeline = $.timeline(playOptions);
 			var style = playTimeline.markerStyle();
 			var markers = gTimelineMarkers;
-			var markers2 = gTimelineMarkers2;
-// Update TimelineChart
 			playTimeline.plot();
-// Update TimelineMap
 			playTimeline.plotMarkers(style, markers, gPlayStartDate, gPlayEndDate);
-			playTimeline.plotMarkers(style, markers2, gPlayStartDate, gPlayEndDate);
 			this.playCount++;
 			if (gPlayEndDate >= gEndTime.getTime()/1000)
 			{
-				//$('#playTimeline').html('PLAY');
-				//$('#playTimeline').css("background-image", "url(../img/A6.png)");  
+				$('#playTimeline').html('PLAY');
 				$('#playTimeline').parent().attr('class', 'play');
 				this.graphData = allGraphData;
 			}
 			else
 			{
-				//$('#playTimeline').html('PAUSE');
-				//$('#playTimeline').css("background-image", "url(../img/PAUSE.png)");  
+				$('#playTimeline').html('PAUSE');
 				$('#playTimeline').parent().attr('class', 'play pause');
 				gTimeline = this;
 				gTimelinePlayHandle = window.setTimeout("gTimeline.playRainDrops()",800);
@@ -402,24 +389,8 @@
 			
 			style.rules = [];
 			style.addRules([sliderfilter2, sliderfilter]);
-// TTP Plugin Multi Category select, Marker become an array.
-//*
-	for( var i in markers )
-	{	
-		markers[i].styleMap.styles["default"] = style;
-		markers[i].redraw();
-	}
-	
-	for( var i in markers2 )
-	{	
-		markers2[i].styleMap.styles["default"] = style;
-		markers2[i].redraw();
-	}
-/*/
 			markers.styleMap.styles["default"] = style;
 			markers.redraw();
-//*/
-// End of TTP Plugin
 			return this;
 		};
 
@@ -697,9 +668,8 @@
 		/*
 		Create the Markers Layer
 		*/
-		// TTP Modify Add OldCate (id) for time delay bug 
 		this.addMarkers = function(startDate,endDate, currZoom, currCenter,
-			thisLayerID, thisLayerType, thisLayerUrl, thisLayerColor, json_url, OldCate)
+			thisLayerID, thisLayerType, thisLayerUrl, thisLayerColor, json_url)
 		{
 
 			var	protocolUrl = baseUrl + json_url + "/"; // Default Json
@@ -763,37 +733,19 @@
 			};
 
 			// Does 'markers' already exist? If so, destroy it before creating new layer
-			markers = map.getLayersByName(thisLayer); 
-// TTP Plugin  Remove Marker in AddMarker When Shift Pressed, shouldn't remove Marker
-		/*	if (markers && markers.length > 0 && !ShiftKeyPress)
+			markers = map.getLayersByName(thisLayer);
+			if (markers && markers.length > 0)
 			{
 				for (var i = 0; i < markers.length; i++)
 				{
-				if( !ShiftKeyPress || tempMarkersLayerID == markers[i].id)
-						map.removeLayer(markers[i]);   
+					map.removeLayer(markers[i]);
 				}
-				for (var i = 0; i < arrayMarkersLayerID.length; i++)
-				{
-                        arrayMarkersLayerID[ i ] = 0;
-				}
-			}*/
-// End of TTP Plugin
+			}
 			
 			// Build the URL for fetching the data
 			fetchUrl = (thisLayer && thisLayerType == 'layers')
 				? protocolUrl
 				: protocolUrl + '?z=' + myZoom + '&' + this.markerUrlParams(startDate, endDate).join('&');
-			/*
-			if( arrayMarkersLayerID[ this.categoryId ] != 0 )
-			{
-				for (var i = 0; i < markers.length; i++)
-				{
-					if( arrayMarkersLayerID[ this.categoryId ] == markers[i].id)
-						map.removeLayer(markers[i]);   
-				}
-				
-			}
-			*/
 			
 			// Create the reports layer
 			markers = new OpenLayers.Layer.Vector(thisLayer, {
@@ -813,22 +765,11 @@
 					format: protocolFormat
 				})
 				
-			}); 
-			 
-			arrayMarkersLayerID[ this.categoryId ] = markers.id; 
-			tempMarkersLayerID = markers.id;
-// TTP Plugin without shift this prepare be removed		
-// Add the layer to the map
-if( noShiftParent || ( OldCate && this.categoryId == OldCate) )
-{
-			map.addLayer(markers);   
-	arrayMarkersLayerID[ this.categoryId ] = markers.id;
-	if( noShiftParent )
-	{
-		//tempMarkersLayerID = markers.id;
-	}
-}
-// End of TTP Plugin
+			});
+			
+			// Add the layer to the map
+			map.addLayer(markers);
+			
 			/*
 			 - Added by E.Kala <emmanuel(at)ushahidi.com>
 			 - Part of the fix to issue #2168
@@ -848,172 +789,10 @@ if( noShiftParent || ( OldCate && this.categoryId == OldCate) )
 				"featureselected": onFeatureSelect,
 				"featureunselected": onFeatureUnselect
 			});
-// TTP Plugin	Getting All the marker array
-markers = map.getLayersByName(thisLayer);	 
-	
-			return markers;
-	 
- 
-		};	
-		
-		//create Marker2
-		this.addMarkers2 = function(startDate,endDate, currZoom, currCenter,
-				thisLayerID, thisLayerType, thisLayerUrl, thisLayerColor, json_url, OldCate)
-			{
-
-				var	protocolUrl = baseUrl + json_url + "/"; // Default Json
-				var thisLayer = "Reports2"; // Default Layer Name
-				var protocolFormat = new OpenLayers.Format.GeoJSON();
-				newlayer = false;
-
-				if (thisLayer && thisLayerType == 'shares')
-				{
-					protocolUrl = baseUrl + "json/share/"+thisLayerID+"/";
-					thisLayer = "Share_"+thisLayerID;
-					newlayer = true;
-				} 
-				else if (thisLayer && thisLayerType == 'layers')
-				{
-					protocolUrl = baseUrl + "json/layer/"+thisLayerID+"/";
-					thisLayer = "Layer_"+thisLayerID;
-					protocolFormat = new OpenLayers.Format.KML({
-						extractStyles: true,
-						extractAttributes: true,
-						maxDepth: 5
-					});
-					newlayer = true;
-				}
-
-				var myPoint;
-				if (currZoom && currCenter && typeof(currZoom) != 'undefined' && typeof(currCenter) != 'undefined')
-				{
-					myPoint = currCenter;
-					myZoom = currZoom;
-				}
-				else
-				{
-					// Create a lat/lon object
-					myPoint = new OpenLayers.LonLat(longitude, latitude);
-					myPoint.transform(proj_4326, map.getProjectionObject());
-
-					// Display the map centered on a latitude and longitude (Google zoom levels)
-					myZoom = defaultZoom;
-				}
-
-				if (mapLoad == 0)
-				{
-					map.setCenter(myPoint, myZoom, false, false);
-				}
-				mapLoad = mapLoad+1;
-
-				// Get Viewport Boundaries
-				extent = map.getExtent().transform(map.getProjectionObject(),
-					new OpenLayers.Projection("EPSG:4326"));
-				southwest = extent.bottom+','+extent.left;
-				northeast = extent.top+','+extent.right;
-
-				var style = this.markerStyle();
-
-				// Transform feature point coordinate to Spherical Mercator
-				preFeatureInsert = function(feature)
-				{
-					var point = new OpenLayers.Geometry.Point(feature.geometry.x, feature.geometry.y);
-					OpenLayers.Projection.transform(point, proj_4326, proj_900913);
-				};
-
-				// Does 'markers' already exist? If so, destroy it before creating new layer
-			 
-				markers2 = map.getLayersByName(thisLayer); 
-	// TTP Plugin  Remove Marker in AddMarker When Shift Pressed, shouldn't remove Marker
-				/*if (markers2 && markers2.length > 0 && !ShiftKeyPress)
-				{
-					for (var i = 0; i < markers2.length; i++)
-					{
-					if( !ShiftKeyPress || tempMarkers2LayerID == markers2[i].id) 
-							map.removeLayer(markers2[i]); 
-					}
-					for (var i = 0; i < arrayMarkers2LayerID.length; i++)
-					{
-	                        arrayMarkers2LayerID[ i ] = 0;
-					}
-				}*/
-	// End of TTP Plugin
-				
-				// Build the URL for fetching the data
-				fetchUrl = (thisLayer && thisLayerType == 'layers')
-					? protocolUrl
-					: protocolUrl + '?z=' + myZoom + '&' + this.markerUrlParams(startDate, endDate).join('&');
-				/*
-				if( arrayMarkers2LayerID[ this.categoryId ] != 0 )
-				{
-					for (var i = 0; i < markers2.length; i++)
-					{
-						if( arrayMarkers2LayerID[ this.categoryId ] == markers2[i].id)
-							map.removeLayer(markers2[i]); 
-					}
-					
-				}
-				*/
-				 
-				markers2 = new OpenLayers.Layer.Vector(thisLayer, {
-					preFeatureInsert:preFeatureInsert,
-					projection: proj_4326,
-					styleMap: new OpenLayers.StyleMap({
-						"default": new OpenLayers.Style(OpenLayers.Util.applyDefaults({
-						 	externalGraphic: "./media/img/Marker.png",
-							graphicOpacity: 1, 
-							pointRadius: 19,
-							graphicXOffset: -12,
-							graphicYOffset: -11
-					}, OpenLayers.Feature.Vector.style["default"])),
-						
-					}),
-					strategies: [new OpenLayers.Strategy.Fixed()],
-					protocol: new OpenLayers.Protocol.HTTP({
-						url: fetchUrl,
-						format: protocolFormat
-					})
-				}); 
-
-	// TTP Plugin without shift this prepare be removed		
-	// Add the layer to the map
-	if( noShiftParent || ( OldCate && this.categoryId == OldCate) )
-	{ 
-				map.addLayer(markers2);
-		arrayMarkers2LayerID[ this.categoryId ] = markers2.id;
-		if( noShiftParent )
-		{
-			//tempMarkers2LayerID = markers2.id;
-		}
-	}
-	// End of TTP Plugin
-				/*
-				 - Added by E.Kala <emmanuel(at)ushahidi.com>
-				 - Part of the fix to issue #2168
-				*/
-				
-				// Check if the the new layer is a KML layer
-				if (thisLayer && thisLayerType == 'layers')
-				{
-					// Add layer object to the kmlOvelays array
-					kmlOverlays.push(markers2);
-				}
-				
-				selectControl = new OpenLayers.Control.SelectFeature(markers2);
-				map.addControl(selectControl);
-				selectControl.activate();
-				markers2.events.on({
-					"featureselected": onFeatureSelect,
-					"featureunselected": onFeatureUnselect
-				});
-	// TTP Plugin	Getting All the marker array
-	markers2 = map.getLayersByName(thisLayer);	 
-		
-				return markers2;
-		 
-	 
-			};	
 			
+			return markers;
+		};
+		
 		/*
 		 * Returns options to plot incidents hourly, daily, weekly or monthly
 		 * according to the period

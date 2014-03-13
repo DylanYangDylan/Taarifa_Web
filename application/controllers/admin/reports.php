@@ -15,7 +15,7 @@
  */
 
 include "locationcode.php";
-include "Tphp/mysql_connect.php";
+ 
 class Reports_Controller extends Admin_Controller {
 	public function __construct()
 	{
@@ -258,11 +258,6 @@ class Reports_Controller extends Admin_Controller {
 							// Delete form responses
 							ORM::factory('form_response')->where('incident_id', $incident_id)->delete_all();
 							
-							// Delete form mail_info
-													
-								$strSqlCommand  = "DELETE FROM mail_info WHERE incident_id=".$incident_id;
-								mysql_query($strSqlCommand);									
-	
 							// Action::report_delete - Deleted a Report
 							Event::run('ushahidi_action.report_delete', $incident_id);
 						}
@@ -309,21 +304,6 @@ class Reports_Controller extends Admin_Controller {
 		// Javascript Header
 		$this->template->js = new View('admin/reports_js');
 	}
-	
-	//testtest
-	public function group()
-	{
-		// If user doesn't have access, redirect to dashboard
-		if ( ! admin::permissions($this->user, "reports_upload"))
-		{
-			url::redirect(url::site().'admin/dashboard');
-		}
-
-		$this->template->content = new View('admin/reports_group');
-		$this->template->content->title = Kohana::lang('ui_admin.reports_group');	
-		
-	}
-	//testtest
 	
 	/**
 	 * Edit a report
@@ -373,8 +353,7 @@ class Reports_Controller extends Admin_Controller {
 			'custom_field' => array(),
 			'incident_active' => '',
 			'incident_verified' => '',
-			'incident_zoom' => '',
-			'ggroup_id' => ''
+			'incident_zoom' => ''
 		);
 
 		// Copy the form as errors, so the errors will be stored with keys corresponding to the form field names
@@ -435,15 +414,6 @@ class Reports_Controller extends Admin_Controller {
 		}
 		
 		$this->template->content->forms = $forms;
-		
-		//GET custom forms
-		$ggroup = array();
-		foreach (ORM::factory('GGroup')->find_all() as $custom_forms)
-		{
-			$ggroup[$custom_forms->id] = $custom_forms->GGroup_Name;
-		}
-		
-		$this->template->content->ggroup = $ggroup;
 		
 		// Get the incident media
 		$incident_media =  Incident_Model::is_valid_incident($id)
@@ -683,68 +653,10 @@ class Reports_Controller extends Admin_Controller {
 				if ($post->save == 1)		
 				{
 					// Save but don't close
-					/*
-					if(isset($_POST["incident_title"]))  //Add for Title=Group function
-					{
-						$test=$_POST["incident_title"];
-						
-    						$strSqlCommand  = "INSERT INTO `db3`.`GGroup` (`GGroup_Name`) VALUES ('$test');";
-							mysql_query($strSqlCommand);
-							
-					}*/
-					
-					if(isset($_POST['fo']))
-					{
-						$test=$_POST['fo'];
-            			//echo $test.'!';
-    					//$strSqlCommand1="INSERT INTO `db2`.`GGGroup` (`GGGroup_Name`) VALUES ('".$test."')";
-						//echo "DELETE FROM GGroup WHERE GGroup_Name='".$test."'";
-						//mysql_query($strSqlCommand1);
-						//echo "<meta content='0.00000000000000000001' http-equiv='Refresh'/>";
-						$strSqlCommand2 = "UPDATE `db3`.`incident` SET  `ggroup_id` = '".$test."' where `incident`.`id` = ". $incident->id;
-						$result2 = mysql_query($strSqlCommand2);
-					}
-					else{
-					//$strSqlCommand7 = "SELECT max(id) FROM incident";
-					//$result7 = mysql_query($strSqlCommand7);
-					//$row = mysql_fetch_array ($result7);
-					//$rowadd = $row['max(id)']+1;
-					//echo $row['max(id)'];
-					//$strSqlCommand2 = "UPDATE  `db2`.`incident` SET  `ggroup_id` =  '5' WHERE  `incident`.`id` = ".$result1;
-					
-					$strSqlCommand2 = "UPDATE `db3`.`incident` SET  `ggroup_id` = '0' where `incident`.`id` = ". $incident->id;
-					$result2 = mysql_query($strSqlCommand2);
-					}
-					/*
-					//Compare GGroup_Name Let report to put in right position
-					if(isset($_POST['incident_title']))
-					{
-						$test=$_POST['incident_title'];
-						
-						$strSqlCommandCompare="SELECT `id` FROM `GGroup` WHERE `GGroup_Name`='".$test."'";
-						$resultCompare = mysql_query($strSqlCommandCompare);
-						while ($Analysis = mysql_fetch_array ($resultCompare)) {
-							$PutInGroupId = $Analysis['id'];
-            				$strSqlCommand100 = "UPDATE `db3`.`incident` SET  `ggroup_id` = '".$PutInGroupId."' where `incident`.`id` = ". $incident->id;
-							$result100 = mysql_query($strSqlCommand100);
-						}
-					}*/
-					
 					url::redirect('admin/reports/edit/'. $incident->id .'/saved');
 				}
 				else						
 				{
-					//let save and close button can record group id
-					if(isset($_POST['fo']))
-					{
-						$test=$_POST['fo'];
-						$strSqlCommand2 = "UPDATE `db3`.`incident` SET  `ggroup_id` = '".$test."' where `incident`.`id` = ". $incident->id;
-						$result2 = mysql_query($strSqlCommand2);
-					}
-					else{
-						$strSqlCommand2 = "UPDATE `db3`.`incident` SET  `ggroup_id` = '0' where `incident`.`id` = ". $incident->id;
-						$result2 = mysql_query($strSqlCommand2);
-					}
 					// Save and close
 					url::redirect('admin/reports/');
 				}
@@ -795,7 +707,6 @@ class Reports_Controller extends Admin_Controller {
 							$incident_photo[] = $media->media_link;
 						}
 					}
-					
 					
 					// Get Geometries via SQL query as ORM can't handle Spatial Data
 					$sql = "SELECT AsText(geometry) as geometry, geometry_label, 
@@ -951,67 +862,188 @@ class Reports_Controller extends Admin_Controller {
 			 //	Add some filters
 			$post->pre_filter('trim', TRUE);
 
+			// Add some rules, the input field, followed by a list of checks, carried out in order
+			$post->add_rules('data_point.*','required','numeric','between[1,4]');
+			//$post->add_rules('data_include.*','numeric','between[1,5]');
+			$post->add_rules('data_include.*','numeric','between[1,6]');
+			$post->add_rules('from_date','date_mmddyyyy');
+			$post->add_rules('to_date','date_mmddyyyy');
+
+			// Validate the report dates, if included in report filter
+			if (!empty($_POST['from_date']) OR !empty($_POST['to_date']))
+			{
+				// Valid FROM Date?
+				if (empty($_POST['from_date']) OR (strtotime($_POST['from_date']) > strtotime("today")))
+				{
+					$post->add_error('from_date','range');
+				}
+
+				// Valid TO date?
+				if (empty($_POST['to_date']) OR (strtotime($_POST['to_date']) > strtotime("today")))
+				{
+					$post->add_error('to_date','range');
+				}
+
+				// TO Date not greater than FROM Date?
+				if (strtotime($_POST['from_date']) > strtotime($_POST['to_date']))
+				{
+					$post->add_error('to_date','range_greater');
+				}
+			}
+
 			// Test to see if things passed the rule checks
 			if ($post->validate())
 			{
+				// Add Filters
+				$filter = " ( ";
+				
+				// Report Type Filter
+				foreach($post->data_point as $item)
+				{
+					if ($item == 1)
+					{
+						$filter .= " OR incident_active = 1 ";
+					}
+					
+					if ($item == 2)
+					{
+						$filter .= " OR incident_verified = 1 ";
+					}
+					
+					if ($item == 3)
+					{
+						$filter .= " OR incident_active = 0 ";
+					}
+					
+					if ($item == 4)
+					{
+						$filter .= " OR incident_verified = 0 ";
+					}
+				}
+				$filter .= ") ";
+
+				// Report Date Filter
+				if ( ! empty($post->from_date) AND !empty($post->to_date))
+				{
+					$filter .= " AND ( incident_date >= '" . date("Y-m-d H:i:s",strtotime($post->from_date))
+							. "' AND incident_date <= '" . date("Y-m-d H:i:s",strtotime($post->to_date)) . "' ) ";
+				}
+
 				// Retrieve reports
-        $form_id = $_POST['form_id'];
-        Kohana::log('error', 'Form id = '. $form_id);
-        $incidents = ORM::factory('incident')->where('form_id',$form_id)
-          ->orderby('incident_dateadd', 'desc')->find_all();
+				$incidents = ORM::factory('incident')->where($filter)->orderby('incident_dateadd', 'desc')->find_all();
 
-        $column_names = array('id', 'incident_title', 'incident_date', 'incident_description',
-                              'incident_active', 'incident_verified', 'incident_rating', 'incident_mode',
-                              'incident_datemodify');
-        $sub_models = array('location' => array('location_name', 'latitude', 'longitude'));
-        $cat_names = Category_Model::get_category_names();
+				// Column Titles
+				$report_csv = "#,INCIDENT TITLE,INCIDENT DATE";
+				foreach($post->data_include as $item)
+				{
+					if ($item == 1) {
+						$report_csv .= ",LOCATION";
+					}
+					
+					if ($item == 2) {
+						$report_csv .= ",DESCRIPTION";
+					}
+					
+					if ($item == 3) {
+						$report_csv .= ",CATEGORY";
+					}
+					
+					if ($item == 4) {
+						$report_csv .= ",LATITUDE";
+					}
+					
+					if($item == 5) {
+						$report_csv .= ",LONGITUDE";
+					}
+					if($item == 6)
+					{
+						$custom_titles = ORM::factory('form_field')->orderby('field_position','desc')->find_all();
+						foreach($custom_titles as $field_name)
+						{
 
-				$header = '';
-        foreach($column_names as $column){
-          $header .= $column . ',';
-        }
-        foreach(array_values($sub_models) as $values){
-          foreach($values as $value){
-            $header .= $value . ',';
-          }
-        }
-        foreach($cat_names as $c){
-          $header .= $c . ',';
-        }
-        foreach(ORM::factory('form_field')->where('form_id',$form_id)
-          ->orderby('id', 'desc')->find_all() as $custom_field){
-          $header .= $custom_field->field_name . ',';
-        }
-        $header = rtrim($header, ',') . "\n";
+							$report_csv .= ",".$field_name->field_name;
+						}	
 
-        $body = '';
-        foreach($incidents as $incident){
-          // Basic properties
-          $body .= $this->_get_cs_list($incident, $column_names) . ',';
-          //sub objects
-          foreach(array_keys($sub_models) as $sub_model){
-            $columns = $sub_models[$sub_model];
-            $body .= $this->_get_cs_list($incident->$sub_model, $columns) . ',';
-          }
-          // categories
-          foreach($cat_names as $c){
-            $found = False;
-            foreach($incident->incident_category as $incident_category){
-              $found = $found | $incident_category->category->category_title == $c;
-            }
-            $body .= $this->_csv_text($found) . ',';
-          }
-          //custom fields
-          $custom_fields = ORM::factory('form_response')->where('incident_id',$incident->id)
-            ->orderby('form_field_id','desc')->find_all();
-          foreach($custom_fields as $custom_field)
-          {
-            $body .= $this->_csv_text($custom_field->form_response) . ',';
-          }	
-          $body = rtrim($body, ',') . "\n";
-        }
+					}
 
-        $report_csv = $header . $body;
+				}
+				
+				$report_csv .= ",APPROVED,VERIFIED";
+				
+				
+				$report_csv .= "\n";
+
+				foreach ($incidents as $incident)
+				{
+					$report_csv .= '"'.$incident->id.'",';
+					$report_csv .= '"'.$this->_csv_text($incident->incident_title).'",';
+					$report_csv .= '"'.$incident->incident_date.'"';
+
+					foreach($post->data_include as $item)
+					{
+						switch ($item)
+						{
+							case 1:
+								$report_csv .= ',"'.$this->_csv_text($incident->location->location_name).'"';
+							break;
+
+							case 2:
+								$report_csv .= ',"'.$this->_csv_text($incident->incident_description).'"';
+							break;
+
+							case 3:
+								$report_csv .= ',"';
+							
+								foreach($incident->incident_category as $category)
+								{
+									if ($category->category->category_title)
+									{
+										$report_csv .= $this->_csv_text($category->category->category_title) . ", ";
+									}
+								}
+								$report_csv .= '"';
+							break;
+						
+							case 4:
+								$report_csv .= ',"'.$this->_csv_text($incident->location->latitude).'"';
+							break;
+						
+							case 5:
+								$report_csv .= ',"'.$this->_csv_text($incident->location->longitude).'"';
+							break;
+
+							case 6:
+								$incident_id = $incident->id;
+								$custom_fields = ORM::factory('form_response')->where('incident_id',$incident_id)->orderby('form_field_id','desc')->find_all();
+								foreach($custom_fields as $custom_field)
+								{
+									$report_csv .=',"'.$this->_csv_text($custom_field->form_response).'"';
+								}	
+								break;
+
+						}
+					}
+					
+					if ($incident->incident_active)
+					{
+						$report_csv .= ",YES";
+					}
+					else
+					{
+						$report_csv .= ",NO";
+					}
+					
+					if ($incident->incident_verified)
+					{
+						$report_csv .= ",YES";
+					}
+					else
+					{
+						$report_csv .= ",NO";
+					}
+					
+					$report_csv .= "\n";
+				}
 
 				// Output to browser
 				header("Content-type: text/x-csv");
@@ -1020,6 +1052,7 @@ class Reports_Controller extends Admin_Controller {
 				header("Content-Length: " . strlen($report_csv));
 				echo $report_csv;
 				exit;
+
 			}
 			
 			// No! We have validation errors, we need to show the form again, with the errors
@@ -1575,26 +1608,7 @@ class Reports_Controller extends Admin_Controller {
 
 	private function _csv_text($text)
 	{
-		return '"' . stripslashes(htmlspecialchars($text)) . '"';
+		$text = stripslashes(htmlspecialchars($text));
+		return $text;
 	}
-
-  private function _get_cs_list($object, $columns)
-    //returns the values of the object specified in $columns seperated by commata
-  {
-    $csv = '';
-    foreach($columns as $column){
-      $csv .= $this->_csv_text($object->$column) . ','; 
-    }
-    return rtrim($csv, ',');
-  }
-
-  public function get_custom_forms(){
-		$custom_forms = array();
-		foreach (ORM::factory('form')->where('form_active',1)->find_all() as $custom_form)
-		{
-			$custom_forms[$custom_form->id] = $custom_form->form_title;
-		}
-    return $custom_forms;
-  }
-
 }

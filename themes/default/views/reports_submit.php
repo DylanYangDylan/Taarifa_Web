@@ -17,7 +17,7 @@
 			<h1><?php echo Kohana::lang('ui_main.reports_submit_new'); ?></h1>
 			<?php if ($form_error): ?>
 			<!-- red-box -->
-			<div class="red-box lance">
+			<div class="red-box">
 				<h3>Error!</h3>
 				<ul>
 					<?php
@@ -179,10 +179,8 @@
 							</ul>
 						</div>
 						<div style="clear:both;"></div>
-						<?php //TTP Plugin Submit Failed, Don't Auto Update Lat Lon
-							print form::input('location_find', $form['location_find'], ' title="'.Kohana::lang('ui_main.location_example').'" class="findtext"'); 
-						?>
-                        <div style="float:left;margin:9px 0 0 5px;"><input type="button" name="button" id="button" value="<?php echo Kohana::lang('ui_main.find_location'); ?>" class="btn_find" /></div>
+						<?php print form::input('location_find', '', ' title="'.Kohana::lang('ui_main.location_example').'" class="findtext"'); ?>
+						<div style="float:left;margin:9px 0 0 5px;"><input type="button" name="button" id="button" value="<?php echo Kohana::lang('ui_main.find_location'); ?>" class="btn_find" /></div>
 						<div id="find_loading" class="report-find-loading"></div>
 						<div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>
 					</div>
@@ -194,7 +192,7 @@
 				</div>
 
 				<!-- News Fields -->
-				<div id="divNews" class="report_row" style="display:none;">
+				<div id="divNews" class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_news'); ?></h4>
 					<?php
 						$this_div = "divNews";
@@ -231,7 +229,7 @@
 
 
 				<!-- Video Fields -->
-				<div id="divVideo" class="report_row" style="display:none;">
+				<div id="divVideo" class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.external_video_link'); ?></h4>
 					<?php
 						$this_div = "divVideo";
@@ -310,11 +308,11 @@
 				</div>
 									
 				<div class="report_row">
-					<input name="submit" type="submit" class="btn_submit" value=""/> 
+					<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
 				</div>
 			</div>
 		</div>
-		<?php /* TTP Debug Using */ /*var_dump($form);*/ print form::close(); ?>
+		<?php print form::close(); ?>
 		<!-- end report form block -->
 	</div>
 </div>

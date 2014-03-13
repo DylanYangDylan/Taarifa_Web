@@ -4,7 +4,6 @@
 
 	</div>
 	<!-- / wrapper -->
-	</div>
 	
 	<!-- footer -->
 	<div id="footer" class="clearingfix">
@@ -16,7 +15,7 @@
  
 			<!-- footer credits -->
 			<div class="footer-credits">
-				<a href="http://www.taarifa.org/"><img src="<?php echo url::file_loc('img'); ?>media/img/Taarifa_Logo.png" alt="Ushahidi" style="vertical-align:middle" /></a>
+				Powered by the &nbsp;<a href="http://www.taarifa.org/"><img src="<?php echo url::file_loc('img'); ?>media/img/footer-logo.png" alt="Ushahidi" style="vertical-align:middle" /></a>&nbsp; Platform
 			</div>
 			<!-- / footer credits -->
 		
@@ -34,8 +33,7 @@
 					}
 					?>
 					<li><a href="<?php echo url::site()."contact"; ?>"><?php echo Kohana::lang('ui_main.contact'); ?></a></li>
-					<li><a style="border-right:1px solid #000000" href="http://www.surveymonkey.com/s/SM7LWGB"><?php echo Kohana::lang('ui_main.feedback'); ?></a></li>
-                    
+	
 					<?php
 					// Action::nav_main_bottom - Add items to the bottom links
 					Event::run('ushahidi_action.nav_main_bottom');
@@ -46,7 +44,11 @@
       	<?php } ?>
 			</div>
 			<!-- / footer menu -->
- 
+
+      
+			<h2 class="feedback_title" style="clear:both">
+				<a href="http://www.surveymonkey.com/s/SM7LWGB"><?php echo Kohana::lang('ui_main.feedback'); ?></a>
+			</h2>
 
  
 		</div>

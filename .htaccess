@@ -30,5 +30,8 @@
 # Don't show directory listings for URLs which map to a directory.
 Options -Indexes
 
+#Follow symlinks
+Options +FollowSymlinks
+
 # Set mime typ for appcache manifest
 AddType text/cache-manifest .appcache

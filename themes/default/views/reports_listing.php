@@ -11,7 +11,6 @@
  * @copyright  Ushahidi - http://www.ushahidi.com
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL) 
  */
- include "Tphp/mysql_connect.php";
 ?>
 		<!-- Top reportbox section-->
 		<div class="rb_nav-controls r-5">
@@ -41,145 +40,6 @@
 		<div class="r_cat_tooltip"><a href="#" class="r-3"></a></div>
 		<div class="rb_list-and-map-box">
 			<div id="rb_list-view">
-<!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
-<?php
-	$Arr[100];$Cou=0;
-	
-	$strSqlCommand2  = "SELECT * FROM incident WHERE incident_active = 1";
-	$active = mysql_query($strSqlCommand2);
-		while($eachactive = mysql_fetch_array($active)){
-			$incident_ggroupid = $eachactive['ggroup_id'];
-			
-			$compare=0;
-			for($c=0;$c<100;$c++){
-				if($Arr[$c]==$incident_ggroupid){
-					$compare=1;
-				}
-			}
-			
-			if($compare==0){
-				$Arr[$Cou] = $incident_ggroupid;
-				
-				$strSqlCommand1  = "SELECT * FROM GGroup WHERE id =".$Arr[$Cou];
-		  		$distinctGroup = mysql_query($strSqlCommand1);
-				while($eachGroup = mysql_fetch_array($distinctGroup)){
-					$GroupName = $eachGroup['GGroup_Name'];
-					$GroupId = $eachGroup['id'];
-					echo "<div style='background-color:gray;font-size:20px;color:#FFFFFF;padding-left:10px;padding-top:2px;'>".$GroupName."</div>";
-					echo "<div id='view-site-group' style='border-width:3px;border-style:solid;border-color:gray;padding:8px;'>";
-
-					foreach ($incidents as $incident)
-					{
-						$incident = ORM::factory('incident', $incident->incident_id);
-						$incident_id = $incident->id;
-						$incident_title = $incident->incident_title;
-						$incident_description = $incident->incident_description;
-						$incident_groupid = $incident->ggroup_id;
-						//$incident_category = $incident->incident_category;
-						// Trim to 150 characters without cutting words
-						// XXX: Perhaps delcare 150 as constant
-
-						$incident_description = text::limit_chars(strip_tags($incident_description), 140, "...", true);
-						$incident_date = date('H:i M d, Y', strtotime($incident->incident_date));
-						//$incident_time = date('H:i', strtotime($incident->incident_date));
-						$location_id = $incident->location_id;
-						$location_name = $incident->location->location_name;
-						$incident_verified = $incident->incident_verified;
-
-						if ($incident_verified)
-						{
-							$incident_verified = '<span class="r_verified">'.Kohana::lang('ui_main.verified').'</span>';
-							$incident_verified_class = "verified";
-						}
-						else
-						{
-							$incident_verified = '<span class="r_unverified">'.Kohana::lang('ui_main.unverified').'</span>';
-							$incident_verified_class = "unverified";
-						}
-
-						$comment_count = $incident->comment->count();
-
-						$incident_thumb = url::file_loc('img')."media/img/report-thumb-default.jpg";
-						$media = $incident->media;
-						if ($media->count())
-						{
-							foreach ($media as $photo)
-							{
-								if ($photo->media_thumb)
-								{ // Get the first thumb
-									$incident_thumb = url::convert_uploaded_to_abs($photo->media_thumb);
-									break;
-								}
-							}
-						}
-						if($incident_groupid==$GroupId){
-?>
-                <div id="<?php echo $incident_id ?>" class="rb_report <?php echo $incident_verified_class; ?>" style="overflow-x:hidden;">
-					<div class="r_media" style="display:inline;float:left;width:95px;">
-						<p class="r_photo" style="text-align:center;"> <a href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>">
-							<img src="<?php echo $incident_thumb; ?>" style="max-width:89px;max-height:59px;" /> </a>
-						</p>
-
-						<!-- Only show this if the report has a video -->
-						<p class="r_video" style="display:none;"><a href="#"><?php echo Kohana::lang('ui_main.video'); ?></a></p>
-
-						<!-- Category Selector -->
-						<div class="r_categories">
-							<h4><?php echo Kohana::lang('ui_main.categories'); ?></h4>
-							<?php foreach ($incident->category as $category): ?>
-								
-								<?php // Don't show hidden categories ?>
-								<?php if($category->category_visible == 0) continue; ?>
-						
-								<?php if ($category->category_image_thumb): ?>
-									<?php $category_image = url::base().Kohana::config('upload.relative_directory')."/".$category->category_image_thumb; ?>
-									<a class="r_category" href="<?php echo url::site(); ?>reports/?c=<?php echo $category->id; ?>">
-										<span class="r_cat-box"><img src="<?php echo $category_image; ?>" height="16" width="16" /></span> 
-										<span class="r_cat-desc"><?php echo $localized_categories[(string)$category->category_title];?></span>
-									</a>
-								<?php else:	?>
-									<a class="r_category" href="<?php echo url::site(); ?>reports/?c=<?php echo $category->id; ?>">
-										<span class="r_cat-box" style="background-color:#<?php echo $category->category_color;?>;"></span> 
-										<span class="r_cat-desc"><?php echo $localized_categories[(string)$category->category_title];?></span>
-									</a>
-								<?php endif; ?>
-							<?php endforeach; ?>
-						</div>
-					</div>
-
-					<div class="r_details" style="display:inline;float:left;width:1%;">
-						<h3><a class="r_title" href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>">
-								<?php echo $incident_title; ?>
-							</a>
-							<a href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>#discussion" class="r_comments">
-								<?php echo $comment_count; ?></a> 
-								<?php echo $incident_verified; ?>
-							</h3>
-						<p class="r_date r-3 bottom-cap"><?php echo $incident_date; ?></p>
-						<div class="r_description"> <?php echo $incident_description; ?>  
-						  <a class="btn-show btn-more" href="#<?php echo $incident_id ?>"><?php echo Kohana::lang('ui_main.more_information'); ?> &raquo;</a> 
-						  <a class="btn-show btn-less" href="#<?php echo $incident_id ?>">&laquo; <?php echo Kohana::lang('ui_main.less_information'); ?></a> 
-						</div>
-						<p class="r_location"><a href="<?php echo url::site(); ?>reports/?l=<?php echo $location_id; ?>"><?php echo $location_name; ?></a></p>
-					</div>
-				</div>
-			<?php } } ?>
-            
-<?php
-         	 		echo "</div>";
-					echo "<br>";
-				}
-			}
-			$Cou ++;
-		}	
-?>
-
-           <?php 
-		   		echo "<div style='background-color:gray;font-size:20px;color:#FFFFFF;padding-left:10px;padding-top:2px;'>No Group</div>"; 			 
-            	echo "<div id='view-site-group' style='border-width:3px;border-style:solid;border-color:gray;padding:8px;'>";
-			?>
 			<?php
 				foreach ($incidents as $incident)
 				{
@@ -187,7 +47,6 @@
 					$incident_id = $incident->id;
 					$incident_title = $incident->incident_title;
 					$incident_description = $incident->incident_description;
-					$incident_groupid = $incident->ggroup_id;
 					//$incident_category = $incident->incident_category;
 					// Trim to 150 characters without cutting words
 					// XXX: Perhaps delcare 150 as constant
@@ -225,10 +84,9 @@
 							}
 						}
 					}
-					if($incident_groupid==0){
 				?>
-				<div id="<?php echo $incident_id ?>" class="rb_report <?php echo $incident_verified_class; ?>" style="overflow-x:hidden;">
-					<div class="r_media" style="display:inline;float:left;width:95px;">
+				<div id="<?php echo $incident_id ?>" class="rb_report <?php echo $incident_verified_class; ?>">
+					<div class="r_media">
 						<p class="r_photo" style="text-align:center;"> <a href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>">
 							<img src="<?php echo $incident_thumb; ?>" style="max-width:89px;max-height:59px;" /> </a>
 						</p>
@@ -260,7 +118,7 @@
 						</div>
 					</div>
 
-					<div class="r_details" style="display:inline;float:left;width:1%;">
+					<div class="r_details">
 						<h3><a class="r_title" href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>">
 								<?php echo $incident_title; ?>
 							</a>
@@ -276,12 +134,8 @@
 						<p class="r_location"><a href="<?php echo url::site(); ?>reports/?l=<?php echo $location_id; ?>"><?php echo $location_name; ?></a></p>
 					</div>
 				</div>
-			<?php } } ?>
-           </div>
+			<?php } ?>
 			</div>
-<!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
 			<div id="rb_map-view" style="display:none; width: 590px; height: 384px; border:1px solid #CCCCCC; margin: 3px auto;">
 			</div>
 		</div>

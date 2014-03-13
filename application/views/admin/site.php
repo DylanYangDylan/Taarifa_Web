@@ -68,7 +68,7 @@
 							<?php if($banner_m != NULL) { ?>
 								<img src="<?php echo url::base().Kohana::config('upload.relative_directory')."/".$banner_m; ?>" alt="<?php Kohana::lang('settings.site.banner'); ?>" /><br/>
 							<?php } ?>
-							<?php echo form::upload('banner_image', '', ''); ?> LIMIT : (filesize &lt;&#61; 250k ; width &#61;  500px ; height &#61;  124px )
+							<?php echo form::upload('banner_image', '', ''); ?> (&lt;&#61; 250k)
 							<br/>
 							<?php
 								echo form::checkbox('delete_banner_image', '1');

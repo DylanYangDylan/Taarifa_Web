@@ -17,8 +17,6 @@
 
 class Admin_Controller extends Template_Controller
 {
-	
-	
 	/**
 	 * Automatically display the views
 	 * @var bool
@@ -208,3 +206,4 @@ class Admin_Controller extends Template_Controller
 
 
 } // End Admin
+

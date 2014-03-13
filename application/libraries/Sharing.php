@@ -559,9 +559,8 @@ class Sharing
             $json_item .= "}";
 
 			array_push($json_array, $json_item);
-			
-			$firephp->info($json_array, "info");
         }
+
 
         $json = implode(",", $json_array);
 		$json = "{\"type\": \"FeatureCollection\",\"features\": [".$json."]}";

@@ -14,7 +14,6 @@
  * @copyright  Ushahidi - http://www.ushahidi.com
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL)
  */
-error_reporting( error_reporting() & ~E_NOTICE );
 class reports_Core {
 	
 	/**
@@ -105,7 +104,7 @@ class reports_Core {
 		}
 		
 		// Validate photo uploads
-		$post->add_rules('incident_photo', 'upload::valid', 'upload::type[gif,jpg,png]', 'upload::size[5M]');
+		$post->add_rules('incident_photo', 'upload::valid', 'upload::type[gif,jpg,png]', 'upload::size[2M]');
 
 
 		// Validate Personal Information
@@ -740,10 +739,7 @@ class reports_Core {
 		 * Additional checks for date parameters specified in timestamp format
 		 * This only affects those submitted from the main page
 		 */
-		array_push(self::$params, 
-				'i.enable = "1"'
-		);
-			
+		
 		// Start Date
 		if (isset($_GET['s']) AND intval($_GET['s']) > 0)
 		{
@@ -826,8 +822,7 @@ class reports_Core {
 				'i.incident_verified = '.intval($url_data['v'])
 			);
 		}
-		 
-		 
+		
 		//
 		// Check if they're filtering over custom form fields
 		//
@@ -864,12 +859,12 @@ class reports_Core {
 			}
 			
 		} // End of handling cff
-	 
+		
 		// In case a plugin or something wants to get in on the parameter fetching fun
 		Event::run('ushahidi_filter.fetch_incidents_set_params', self::$params);
 		
-		//> END PARAMETER FETCH 
-		 
+		//> END PARAMETER FETCH
+
 		
 		// Fetch all the incidents
 		$all_incidents = Incident_Model::get_incidents(self::$params);

@@ -90,45 +90,8 @@
  * issues. Applications that use the code below will continue to work seamlessly
  * when that happens.
  */
-
-//	var jsonIDCategory;
-	
-//	var xmlhttp;
-//	if (window.XMLHttpRequest)
-//	{// code for IE7+, Firefox, Chrome, Opera, Safari
-//		xmlhttp=new XMLHttpRequest();
-//	}
-//	else
-//	{// code for IE6, IE5
-//		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-//	}
-//	xmlhttp.onreadystatechange=function()
-//	{
-//		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-//		{
-//			var str = xmlhttp.responseText.split("\n")[2];
-////			alert( str );
-////			alert( str.search("/[") );
-////			alert( str.search("/]") );
-//			jsonIDCategory=eval ("(" + str + ")");
-//			jsonIDCategory;
-//		}
-//	}
-//	xmlhttp.open("POST","http://www.thetigerparty.com/taarifa/Tphp/ColorPlugin.php",true);
-//	xmlhttp.send();
-
 var OpenLayers={singleFile:true};
-(function()
-{
-
-//	$.post( "http://www.thetigerparty.com/taarifa/Tphp/ColorPlugin.php",
-//	//		{ "Category" : gCategoryId, "JSONObj" : a}, 
-//		function(data)
-//		{
-//			jsonIDCategory = eval ("(" + data + ")");
-//		});
-		
-	var a=typeof OpenLayers=="object"&&OpenLayers.singleFile,b;window.OpenLayers={_scriptName:!a?"lib/OpenLayers.js":"OpenLayers.js",_getScriptLocation:function(){if(b!=undefined)return b;b="";for(var i=RegExp("(^|(.*?\\/))("+OpenLayers._scriptName+")(\\?|$)"),j=document.getElementsByTagName("script"),k=0,l=j.length;k<l;k++){var n=j[k].getAttribute("src");if(n)if(n=n.match(i)){b=n[1];break}}return b}};if(!a){a=["OpenLayers/Util.js","OpenLayers/BaseTypes.js","OpenLayers/BaseTypes/Class.js",
+(function(){var a=typeof OpenLayers=="object"&&OpenLayers.singleFile,b;window.OpenLayers={_scriptName:!a?"lib/OpenLayers.js":"OpenLayers.js",_getScriptLocation:function(){if(b!=undefined)return b;b="";for(var i=RegExp("(^|(.*?\\/))("+OpenLayers._scriptName+")(\\?|$)"),j=document.getElementsByTagName("script"),k=0,l=j.length;k<l;k++){var n=j[k].getAttribute("src");if(n)if(n=n.match(i)){b=n[1];break}}return b}};if(!a){a=["OpenLayers/Util.js","OpenLayers/BaseTypes.js","OpenLayers/BaseTypes/Class.js",
 "OpenLayers/BaseTypes/Bounds.js","OpenLayers/BaseTypes/Element.js","OpenLayers/BaseTypes/LonLat.js","OpenLayers/BaseTypes/Pixel.js","OpenLayers/BaseTypes/Size.js","OpenLayers/Console.js","OpenLayers/Tween.js","Rico/Corner.js","Rico/Color.js","OpenLayers/Ajax.js","OpenLayers/Events.js","OpenLayers/Request.js","OpenLayers/Request/XMLHttpRequest.js","OpenLayers/Projection.js","OpenLayers/Map.js","OpenLayers/Layer.js","OpenLayers/Icon.js","OpenLayers/Marker.js","OpenLayers/Marker/Box.js","OpenLayers/Popup.js",
 "OpenLayers/Tile.js","OpenLayers/Tile/Image.js","OpenLayers/Tile/Image/IFrame.js","OpenLayers/Tile/WFS.js","OpenLayers/Layer/Image.js","OpenLayers/Layer/SphericalMercator.js","OpenLayers/Layer/EventPane.js","OpenLayers/Layer/FixedZoomLevels.js","OpenLayers/Layer/Google.js","OpenLayers/Layer/Google/v3.js","OpenLayers/Layer/VirtualEarth.js","OpenLayers/Layer/Yahoo.js","OpenLayers/Layer/HTTPRequest.js","OpenLayers/Layer/Grid.js","OpenLayers/Layer/MapGuide.js","OpenLayers/Layer/MapServer.js","OpenLayers/Layer/MapServer/Untiled.js",
 "OpenLayers/Layer/KaMap.js","OpenLayers/Layer/KaMapCache.js","OpenLayers/Layer/MultiMap.js","OpenLayers/Layer/Markers.js","OpenLayers/Layer/Text.js","OpenLayers/Layer/WorldWind.js","OpenLayers/Layer/ArcGIS93Rest.js","OpenLayers/Layer/WMS.js","OpenLayers/Layer/WMS/Untiled.js","OpenLayers/Layer/WMS/Post.js","OpenLayers/Layer/WMTS.js","OpenLayers/Layer/ArcIMS.js","OpenLayers/Layer/GeoRSS.js","OpenLayers/Layer/Boxes.js","OpenLayers/Layer/XYZ.js","OpenLayers/Layer/TMS.js","OpenLayers/Layer/TileCache.js",
@@ -213,62 +176,9 @@ b+"px"}},_setBorder:function(a,b,c){b=this._borderSize(b);c=c=="top"?this._which
 3,2,1],c=[3,2,1,0],d=[2,1],e=[1,0];return this.options.compact&&this.options.blend?e[a]:this.options.compact?d[a]:this.options.blend?c[a]:b[a]},_borderSize:function(a){var b=[5,3,2,1],c=[2,1,1,1],d=[1,0],e=[0,2,0,0];if(this.options.compact&&(this.options.blend||this._isTransparent()))return 1;else if(this.options.compact)return d[a];else if(this.options.blend)return c[a];else if(this.options.border)return e[a];else if(this._isTransparent())return b[a];return 0},_hasString:function(a){for(var b=1;b<
 arguments.length;b++)if(a.indexOf(arguments[b])>=0)return true;return false},_blend:function(a,b){var c=OpenLayers.Rico.Color.createFromHex(a);c.blend(OpenLayers.Rico.Color.createFromHex(b));return c},_background:function(a){try{return OpenLayers.Rico.Color.createColorFromBackground(a).asHex()}catch(b){return"#ffffff"}},_isTransparent:function(){return this.options.color=="transparent"},_isTopRounded:function(){return this._hasString(this.options.corners,"all","top","tl","tr")},_isBottomRounded:function(){return this._hasString(this.options.corners,
 "all","bottom","bl","br")},_hasSingleTextChild:function(a){return a.childNodes.length==1&&a.childNodes[0].nodeType==3}};
-
-OpenLayers.Element=
-{
-	visible:function(a)
-	{
-		return OpenLayers.Util.getElement(a).style.display!="none"
-	},
-	toggle:function()
-	{
-		for(var a=0,b=arguments.length;a<b;a++)
-		{
-			var c=OpenLayers.Util.getElement(arguments[a]),d=OpenLayers.Element.visible(c)?"hide":"show";
-			OpenLayers.Element[d](c)
-		}
-	},
-	hide:function()
-	{
-		for(var a=0,b=arguments.length;a<b;a++)
-		{
-			var c=OpenLayers.Util.getElement(arguments[a]);
-			if(c)c.style.display="none"
-		}
-	},
-	show:function()
-	{
-		for(var a=0,b=arguments.length;a<b;a++)
-		{
-			var c=OpenLayers.Util.getElement(arguments[a]);
-			if(c)c.style.display=""
-		}
-	},
-	remove:function(a)
-	{
-		a=OpenLayers.Util.getElement(a);
-		a.parentNode.removeChild(a)
-	},
-	getHeight:function(a)
-	{
-		a=OpenLayers.Util.getElement(a);
-		return a.offsetHeight
-	},
-	getDimensions:function(a)
-	{
-		a=OpenLayers.Util.getElement(a);
-		if(OpenLayers.Element.getStyle(a,"display")!="none")
-			return{width:a.offsetWidth,height:a.offsetHeight};
-		var b=a.style,c=b.visibility,d=b.position,e=b.display;b.visibility="hidden";
-		b.position="absolute";
-		b.display="";
-		var f=a.clientWidth;
-		a=a.clientHeight;
-		b.display=e;
-		b.position=d;b.visibility=c;
-		return{width:f,height:a}
-	},
-	hasClass:function(a,b){var c=a.className;return!!c&&RegExp("(^|\\s)"+b+"(\\s|$)").test(c)},addClass:function(a,b){OpenLayers.Element.hasClass(a,b)||(a.className+=(a.className?" ":"")+b);return a},removeClass:function(a,b){var c=a.className;if(c)a.className=OpenLayers.String.trim(c.replace(RegExp("(^|\\s+)"+b+"(\\s+|$)")," "));return a},toggleClass:function(a,b){OpenLayers.Element.hasClass(a,b)?OpenLayers.Element.removeClass(a,b):OpenLayers.Element.addClass(a,
+OpenLayers.Element={visible:function(a){return OpenLayers.Util.getElement(a).style.display!="none"},toggle:function(){for(var a=0,b=arguments.length;a<b;a++){var c=OpenLayers.Util.getElement(arguments[a]),d=OpenLayers.Element.visible(c)?"hide":"show";OpenLayers.Element[d](c)}},hide:function(){for(var a=0,b=arguments.length;a<b;a++){var c=OpenLayers.Util.getElement(arguments[a]);if(c)c.style.display="none"}},show:function(){for(var a=0,b=arguments.length;a<b;a++){var c=OpenLayers.Util.getElement(arguments[a]);
+if(c)c.style.display=""}},remove:function(a){a=OpenLayers.Util.getElement(a);a.parentNode.removeChild(a)},getHeight:function(a){a=OpenLayers.Util.getElement(a);return a.offsetHeight},getDimensions:function(a){a=OpenLayers.Util.getElement(a);if(OpenLayers.Element.getStyle(a,"display")!="none")return{width:a.offsetWidth,height:a.offsetHeight};var b=a.style,c=b.visibility,d=b.position,e=b.display;b.visibility="hidden";b.position="absolute";b.display="";var f=a.clientWidth;a=a.clientHeight;b.display=
+e;b.position=d;b.visibility=c;return{width:f,height:a}},hasClass:function(a,b){var c=a.className;return!!c&&RegExp("(^|\\s)"+b+"(\\s|$)").test(c)},addClass:function(a,b){OpenLayers.Element.hasClass(a,b)||(a.className+=(a.className?" ":"")+b);return a},removeClass:function(a,b){var c=a.className;if(c)a.className=OpenLayers.String.trim(c.replace(RegExp("(^|\\s+)"+b+"(\\s+|$)")," "));return a},toggleClass:function(a,b){OpenLayers.Element.hasClass(a,b)?OpenLayers.Element.removeClass(a,b):OpenLayers.Element.addClass(a,
 b);return a},getStyle:function(a,b){a=OpenLayers.Util.getElement(a);var c=null;if(a&&a.style){c=a.style[OpenLayers.String.camelize(b)];if(!c)if(document.defaultView&&document.defaultView.getComputedStyle)c=(c=document.defaultView.getComputedStyle(a,null))?c.getPropertyValue(b):null;else if(a.currentStyle)c=a.currentStyle[OpenLayers.String.camelize(b)];var d=["left","top","right","bottom"];if(window.opera&&OpenLayers.Util.indexOf(d,b)!=-1&&OpenLayers.Element.getStyle(a,"position")=="static")c="auto"}return c==
 "auto"?null:c}};OpenLayers.Size=OpenLayers.Class({w:0,h:0,initialize:function(a,b){this.w=parseFloat(a);this.h=parseFloat(b)},toString:function(){return"w="+this.w+",h="+this.h},clone:function(){return new OpenLayers.Size(this.w,this.h)},equals:function(a){var b=false;if(a!=null)b=this.w==a.w&&this.h==a.h||isNaN(this.w)&&isNaN(this.h)&&isNaN(a.w)&&isNaN(a.h);return b},CLASS_NAME:"OpenLayers.Size"});
 OpenLayers.Console={log:function(){},debug:function(){},info:function(){},warn:function(){},error:function(){},userError:function(a){alert(a)},assert:function(){},dir:function(){},dirxml:function(){},trace:function(){},group:function(){},groupEnd:function(){},time:function(){},timeEnd:function(){},profile:function(){},profileEnd:function(){},count:function(){},CLASS_NAME:"OpenLayers.Console"};
@@ -583,28 +493,9 @@ OpenLayers.Popup.FramedCloud=OpenLayers.Class(OpenLayers.Popup.Framed,{contentDi
 0)},{size:new OpenLayers.Size("auto",21),anchor:new OpenLayers.Bounds(0,0,22,null),position:new OpenLayers.Pixel(0,-629)},{size:new OpenLayers.Size(22,21),anchor:new OpenLayers.Bounds(null,0,0,null),position:new OpenLayers.Pixel(-1238,-629)},{size:new OpenLayers.Size(81,33),anchor:new OpenLayers.Bounds(0,null,null,0),position:new OpenLayers.Pixel(-311,-674)}]}},minSize:new OpenLayers.Size(105,10),maxSize:new OpenLayers.Size(1200,660),initialize:function(){this.imageSrc=OpenLayers.Util.getImagesLocation()+
 "cloud-popup-relative.png";OpenLayers.Popup.Framed.prototype.initialize.apply(this,arguments);this.contentDiv.className=this.contentDisplayClass},destroy:function(){OpenLayers.Popup.Framed.prototype.destroy.apply(this,arguments)},CLASS_NAME:"OpenLayers.Popup.FramedCloud"});
 OpenLayers.Request={DEFAULT_CONFIG:{method:"GET",url:window.location.href,async:true,user:undefined,password:undefined,params:null,proxy:OpenLayers.ProxyHost,headers:{},data:null,callback:function(){},success:null,failure:null,scope:null},events:new OpenLayers.Events(this,null,["complete","success","failure"]),issue:function(a){var b=OpenLayers.Util.extend(this.DEFAULT_CONFIG,{proxy:OpenLayers.ProxyHost});a=OpenLayers.Util.applyDefaults(a,b);var c=new OpenLayers.Request.XMLHttpRequest,d=a.url;if(a.params){b=
-OpenLayers.Util.getParameterString(a.params);if(b.length>0){var e=d.indexOf("?")>-1?"&":"?";d+=e+b}}if(a.proxy&&d.indexOf("http")==0)d=typeof a.proxy=="function"?a.proxy(d):a.proxy+encodeURIComponent(d);c.open(a.method,d,a.async,a.user,a.password);for(var f in a.headers)c.setRequestHeader(f,a.headers[f]);var g=this.events,h=this;c.onreadystatechange=function(){c.readyState==OpenLayers.Request.XMLHttpRequest.DONE&&g.triggerEvent("complete",{request:c,config:a,requestUrl:d})!==false&&h.runCallbacks(
-		{
-			request:c,config:a,requestUrl:d
-		})
-	};
-	a.async===false?c.send(a.data):window.setTimeout(
-		function()
-		{
-			c._aborted!==true&&c.send(a.data)
-		},
-		0);
-		return c
-	},runCallbacks:function(a)
-	{
-		var b=a.request,c=a.config,d=c.scope?OpenLayers.Function.bind(c.callback,c.scope):c.callback,e;
-		if(c.success)e=c.scope?OpenLayers.Function.bind(c.success,c.scope):c.success;
-		var f;if(c.failure)f=c.scope?OpenLayers.Function.bind(c.failure,c.scope):c.failure;d(b);
-		if(!b.status||b.status>=200&&b.status<300)
-		{
-			this.events.triggerEvent("success",a);e&&e(b)
-		}
-		if(b.status&&(b.status<200||b.status>=300)){this.events.triggerEvent("failure",a);f&&f(b)}},GET:function(a){a=OpenLayers.Util.extend(a,{method:"GET"});return OpenLayers.Request.issue(a)},POST:function(a){a=OpenLayers.Util.extend(a,{method:"POST"});a.headers=a.headers?a.headers:{};"CONTENT-TYPE"in OpenLayers.Util.upperCaseObject(a.headers)||(a.headers["Content-Type"]="application/xml");return OpenLayers.Request.issue(a)},PUT:function(a){a=OpenLayers.Util.extend(a,{method:"PUT"});a.headers=a.headers?
+OpenLayers.Util.getParameterString(a.params);if(b.length>0){var e=d.indexOf("?")>-1?"&":"?";d+=e+b}}if(a.proxy&&d.indexOf("http")==0)d=typeof a.proxy=="function"?a.proxy(d):a.proxy+encodeURIComponent(d);c.open(a.method,d,a.async,a.user,a.password);for(var f in a.headers)c.setRequestHeader(f,a.headers[f]);var g=this.events,h=this;c.onreadystatechange=function(){c.readyState==OpenLayers.Request.XMLHttpRequest.DONE&&g.triggerEvent("complete",{request:c,config:a,requestUrl:d})!==false&&h.runCallbacks({request:c,
+config:a,requestUrl:d})};a.async===false?c.send(a.data):window.setTimeout(function(){c._aborted!==true&&c.send(a.data)},0);return c},runCallbacks:function(a){var b=a.request,c=a.config,d=c.scope?OpenLayers.Function.bind(c.callback,c.scope):c.callback,e;if(c.success)e=c.scope?OpenLayers.Function.bind(c.success,c.scope):c.success;var f;if(c.failure)f=c.scope?OpenLayers.Function.bind(c.failure,c.scope):c.failure;d(b);if(!b.status||b.status>=200&&b.status<300){this.events.triggerEvent("success",a);e&&
+e(b)}if(b.status&&(b.status<200||b.status>=300)){this.events.triggerEvent("failure",a);f&&f(b)}},GET:function(a){a=OpenLayers.Util.extend(a,{method:"GET"});return OpenLayers.Request.issue(a)},POST:function(a){a=OpenLayers.Util.extend(a,{method:"POST"});a.headers=a.headers?a.headers:{};"CONTENT-TYPE"in OpenLayers.Util.upperCaseObject(a.headers)||(a.headers["Content-Type"]="application/xml");return OpenLayers.Request.issue(a)},PUT:function(a){a=OpenLayers.Util.extend(a,{method:"PUT"});a.headers=a.headers?
 a.headers:{};"CONTENT-TYPE"in OpenLayers.Util.upperCaseObject(a.headers)||(a.headers["Content-Type"]="application/xml");return OpenLayers.Request.issue(a)},DELETE:function(a){a=OpenLayers.Util.extend(a,{method:"DELETE"});return OpenLayers.Request.issue(a)},HEAD:function(a){a=OpenLayers.Util.extend(a,{method:"HEAD"});return OpenLayers.Request.issue(a)},OPTIONS:function(a){a=OpenLayers.Util.extend(a,{method:"OPTIONS"});return OpenLayers.Request.issue(a)}};
 OpenLayers.Tile.Image=OpenLayers.Class(OpenLayers.Tile,{url:null,imgDiv:null,frame:null,layerAlphaHack:null,isBackBuffer:false,lastRatio:1,isFirstDraw:true,backBufferTile:null,initialize:function(a,b,c,d){OpenLayers.Tile.prototype.initialize.apply(this,arguments);this.url=d;this.frame=document.createElement("div");this.frame.style.overflow="hidden";this.frame.style.position="absolute";this.layerAlphaHack=this.layer.alpha&&OpenLayers.Util.alphaHack()},destroy:function(){if(this.imgDiv!=null){this.layerAlphaHack&&
 OpenLayers.Event.stopObservingElement(this.imgDiv.childNodes[0]);OpenLayers.Event.stopObservingElement(this.imgDiv);if(this.imgDiv.parentNode==this.frame){this.frame.removeChild(this.imgDiv);this.imgDiv.map=null}this.imgDiv.urls=null;this.imgDiv.src=OpenLayers.Util.getImagesLocation()+"blank.gif"}this.imgDiv=null;this.frame!=null&&this.frame.parentNode==this.layer.div&&this.layer.div.removeChild(this.frame);this.frame=null;if(this.backBufferTile){this.backBufferTile.destroy();this.backBufferTile=
@@ -667,34 +558,8 @@ a;for(var b=0,c=this.div.childNodes.length;b<c;++b)OpenLayers.Util.modifyDOMElem
 new window.ActiveXObject("Microsoft.XMLDOM");n.async=false;n.validateOnParse=false;n.loadXML(m)}if(n)if(g&&n.parseError!=0||!n.documentElement||n.documentElement&&n.documentElement.tagName=="parsererror"){k=null;break a}k=n}i.responseXML=k}catch(o){}try{i.status=i._object.status}catch(p){}try{i.statusText=i._object.statusText}catch(s){}}function d(i){i._object.onreadystatechange=new window.Function}var e=window.XMLHttpRequest,f=!!window.controllers,g=window.document.all&&!window.opera,h=g&&window.navigator.userAgent.match(/MSIE ([\.0-9]+)/)&&
 RegExp.$1==7;if(f&&e.wrapped)a.wrapped=e.wrapped;a.UNSENT=0;a.OPENED=1;a.HEADERS_RECEIVED=2;a.LOADING=3;a.DONE=4;a.prototype.readyState=a.UNSENT;a.prototype.responseText="";a.prototype.responseXML=null;a.prototype.status=0;a.prototype.statusText="";a.prototype.onreadystatechange=null;a.onreadystatechange=null;a.onopen=null;a.onsend=null;a.onabort=null;a.prototype.open=function(i,j,k,l,n){delete this._headers;if(arguments.length<3)k=true;this._async=k;var m=this,o=this.readyState,p;if(g&&k){p=function(){if(o!=
 a.DONE){d(m);m.abort()}};window.attachEvent("onunload",p)}a.onopen&&a.onopen.apply(this,arguments);if(arguments.length>4)this._object.open(i,j,k,l,n);else arguments.length>3?this._object.open(i,j,k,l):this._object.open(i,j,k);if(!f&&!g){this.readyState=a.OPENED;b(this)}this._object.onreadystatechange=function(){if(!(f&&!k)){m.readyState=m._object.readyState;c(m);if(m._aborted)m.readyState=a.UNSENT;else{if(m.readyState==a.DONE){d(m);g&&k&&window.detachEvent("onunload",p)}o!=m.readyState&&b(m);o=m.readyState}}}};
-
-a.prototype.send=function(i)
-{
-	a.onsend&&a.onsend.apply(this,arguments);
-	if(i&&i.nodeType)
-	{
-		i=window.XMLSerializer?(new window.XMLSerializer).serializeToString(i):i.xml;
-		this._headers["Content-Type"]||this._object.setRequestHeader("Content-Type","application/xml")
-	}
-	this._object.send(i);
-	if(f&&!this._async)
-	{
-		this.readyState=a.OPENED;
-		for(c(this);this.readyState<a.DONE;)
-		{
-			this.readyState++;b(this);
-			if(this._aborted)break
-		}
-	}
-};
-a.prototype.abort=function()
-{
-	a.onabort&&a.onabort.apply(this,arguments);
-	if(this.readyState>a.UNSENT)
-		this._aborted=true;
-	this._object.abort();
-	d(this)
-};a.prototype.getAllResponseHeaders=function(){return this._object.getAllResponseHeaders()};a.prototype.getResponseHeader=function(i){return this._object.getResponseHeader(i)};a.prototype.setRequestHeader=function(i,j){if(!this._headers)this._headers={};this._headers[i]=j;return this._object.setRequestHeader(i,j)};a.prototype.addEventListener=function(i,j,k){for(var l=0,n;n=this._listeners[l];l++)if(n[0]==i&&n[1]==j&&n[2]==k)return;this._listeners.push([i,
+a.prototype.send=function(i){a.onsend&&a.onsend.apply(this,arguments);if(i&&i.nodeType){i=window.XMLSerializer?(new window.XMLSerializer).serializeToString(i):i.xml;this._headers["Content-Type"]||this._object.setRequestHeader("Content-Type","application/xml")}this._object.send(i);if(f&&!this._async){this.readyState=a.OPENED;for(c(this);this.readyState<a.DONE;){this.readyState++;b(this);if(this._aborted)break}}};a.prototype.abort=function(){a.onabort&&a.onabort.apply(this,arguments);if(this.readyState>
+a.UNSENT)this._aborted=true;this._object.abort();d(this)};a.prototype.getAllResponseHeaders=function(){return this._object.getAllResponseHeaders()};a.prototype.getResponseHeader=function(i){return this._object.getResponseHeader(i)};a.prototype.setRequestHeader=function(i,j){if(!this._headers)this._headers={};this._headers[i]=j;return this._object.setRequestHeader(i,j)};a.prototype.addEventListener=function(i,j,k){for(var l=0,n;n=this._listeners[l];l++)if(n[0]==i&&n[1]==j&&n[2]==k)return;this._listeners.push([i,
 j,k])};a.prototype.removeEventListener=function(i,j,k){for(var l=0,n;n=this._listeners[l];l++)if(n[0]==i&&n[1]==j&&n[2]==k)break;n&&this._listeners.splice(l,1)};a.prototype.dispatchEvent=function(i){i={type:i.type,target:this,currentTarget:this,eventPhase:2,bubbles:i.bubbles,cancelable:i.cancelable,timeStamp:i.timeStamp,stopPropagation:function(){},preventDefault:function(){},initEvent:function(){}};if(i.type=="readystatechange"&&this.onreadystatechange)(this.onreadystatechange.handleEvent||this.onreadystatechange).apply(this,
 [i]);for(var j=0,k;k=this._listeners[j];j++)if(k[0]==i.type&&!k[2])(k[1].handleEvent||k[1]).apply(this,[i])};a.prototype.toString=function(){return"[object XMLHttpRequest]"};a.toString=function(){return"[XMLHttpRequest]"};if(!window.Function.prototype.apply)window.Function.prototype.apply=function(i,j){j||(j=[]);i.__func=this;i.__func(j[0],j[1],j[2],j[3],j[4]);delete i.__func};OpenLayers.Request.XMLHttpRequest=a})();OpenLayers.ProxyHost="";
 OpenLayers.nullHandler=function(a){OpenLayers.Console.userError(OpenLayers.i18n("unhandledRequest",{statusText:a.statusText}))};OpenLayers.loadURL=function(a,b,c,d,e){if(typeof b=="string")b=OpenLayers.Util.getParameters(b);return OpenLayers.Request.GET({url:a,params:b,success:d?d:OpenLayers.nullHandler,failure:e?e:OpenLayers.nullHandler,scope:c})};
@@ -991,178 +856,10 @@ this.callback("create",[this.point.geometry,this.getSketch()]);this.point.geomet
 new OpenLayers.Geometry.MultiPolygon([a]);return a},dblclick:function(a){if(!this.freehandMode(a)){this.line.geometry.removeComponent(this.line.geometry.components[this.line.geometry.components.length-2]);this.removePoint();this.finalize()}return false},CLASS_NAME:"OpenLayers.Handler.Polygon"});
 OpenLayers.Control.EditingToolbar=OpenLayers.Class(OpenLayers.Control.Panel,{initialize:function(a,b){OpenLayers.Control.Panel.prototype.initialize.apply(this,[b]);this.addControls([new OpenLayers.Control.Navigation]);this.addControls([new OpenLayers.Control.DrawFeature(a,OpenLayers.Handler.Point,{displayClass:"olControlDrawFeaturePoint"}),new OpenLayers.Control.DrawFeature(a,OpenLayers.Handler.Path,{displayClass:"olControlDrawFeaturePath"}),new OpenLayers.Control.DrawFeature(a,OpenLayers.Handler.Polygon,
 {displayClass:"olControlDrawFeaturePolygon"})])},draw:function(){var a=OpenLayers.Control.Panel.prototype.draw.apply(this,arguments);this.activateControl(this.controls[0]);return a},CLASS_NAME:"OpenLayers.Control.EditingToolbar"});
-OpenLayers.Format.GeoJSON=OpenLayers.Class(OpenLayers.Format.JSON,
-											{
-												ignoreExtraDims:false,
-												initialize:function(a)
-												{
-													OpenLayers.Format.JSON.prototype.initialize.apply(this,[a])
-												},
-												read:function(a,b,c)
-												{
-													//alert( "Category ID = " + gCategoryId);
-//													var obj = eval ("(" + a + ")");
-													//alert(a);
-													//a = a.replace("CC0000","FFFFFF");
-													//alert(a);
-													//vaItems = Array();
-													//var ColorArray = Array( "9900CC", "3300FF", "31e619", "663300" );
-//													for( var i in obj.features)
-//													{
-														//obj.features[i].properties.color = "FFFFFF";
-//														if( gCategoryId != "0" )
-//														{
-//															a = a.replace( obj.features[i].properties.color, jsonIDCategory[ obj.features[i].properties.id ].MyColor );
-//														}
-//														else
-//														{
-//															if( jsonIDCategory[ obj.features[i].properties.id ].ParentColor )
-//															{
-//																a = a.replace( obj.features[i].properties.color, jsonIDCategory[ obj.features[i].properties.id ].ParentColor );
-//															}
-//															else
-//															{
-//																a = a.replace( obj.features[i].properties.color, jsonIDCategory[ obj.features[i].properties.id ].MyColor );
-//															}
-//														}
-														//alert( "Obj ID: " + obj.features[i].properties.id + ", Obj Color: " + obj.features[i].properties.color);
-													//	Items[i] = obj.features[i].properties.id;
-//													}
-													//$.post( "http://www.thetigerparty.com/taarifa/Tphp/ColorPlugin.php",
-													//		{ "Category" : gCategoryId, "JSONObj" : a}, 
-													//		function(data)
-												//{
-													//a = data.replace("}\n","}");
-													//a = obj.stringify();
-   														
-													b=b?b:"FeatureCollection";
-													var d=null,e=null;
-													if(e=typeof a=="string"?OpenLayers.Format.JSON.prototype.read.apply(this,[a,c]):a)
-														if(typeof e.type!="string")
-															OpenLayers.Console.error("Bad GeoJSON - no type: "+a);
-														else
-														{
-															if(this.isValidType(e,b))
-																switch(b)
-																{
-																	case "Geometry":
-																		try
-																		{
-																			d=this.parseGeometry(e)
-																		}
-																		catch(f)
-																		{
-																			OpenLayers.Console.error(f)
-																		}
-																		break;
-																	case "Feature":
-																		try
-																		{
-																			d=this.parseFeature(e);
-																			d.type="Feature"
-																		}
-																		catch(g)
-																		{
-																			OpenLayers.Console.error(g)
-																		}
-																		break;
-																	case "FeatureCollection":
-																		d=[];
-																		switch(e.type)
-																		{
-																			case "Feature":
-																			try
-																			{
-																				d.push(this.parseFeature(e))
-																			}
-																			catch(h)
-																			{
-																				d=null;
-																				OpenLayers.Console.error(h)
-																			}
-																			break;
-																			case "FeatureCollection":
-																				a=0;
-																				for(b=e.features.length;a<b;++a)
-																					try
-																					{
-																						d.push(this.parseFeature(e.features[a]))
-																					}
-																					catch(i)
-																					{
-																						d=null;
-																						OpenLayers.Console.error(i)
-																					}
-																				break;
-																			default:
-																				try
-																				{
-																					var j=this.parseGeometry(e);
-																					d.push(new OpenLayers.Feature.Vector(j))
-																				}
-																				catch(k)
-																				{
-																					d=null;
-																					OpenLayers.Console.error(k)
-																				}
-																			}
-																		}
-																	}
-																	else OpenLayers.Console.error("Bad JSON: "+ a);
-																		return d
-																},
-																isValidType:function(a,b)
-																{
-																	var c=false;
-																	switch(b)
-																	{
-																		case "Geometry":
-																			if(OpenLayers.Util.indexOf(["Point","MultiPoint","LineString","MultiLineString","Polygon","MultiPolygon","Box","GeometryCollection"],a.type)==-1)
-																				OpenLayers.Console.error("Unsupported geometry type: "+a.type);
-																			else
-																				c=true;
-																			break;
-																		case "FeatureCollection":
-																			c=true;
-																			break;
-																		default:
-																			if(a.type==b)
-																				c=true;
-																			else 
-																				OpenLayers.Console.error("Cannot convert types from "+a.type+" to "+b)
-																	}
-																	return c
-																},
-																parseFeature:function(a)
-																{
-																	var b,c,d;c=a.properties?a.properties:{};
-																	d=a.geometry&&a.geometry.bbox||a.bbox;
-																	try
-																	{
-																		b=this.parseGeometry(a.geometry)
-																	}
-																	catch(e)
-																	{
-																		throw e;
-																	}
-																	b=new OpenLayers.Feature.Vector(b,c);
-																	if(d)
-																		b.bounds=OpenLayers.Bounds.fromArray(d);
-																		if(a.id)
-																			b.fid=a.id;
-																		return b
-																},
-																parseGeometry:function(a)
-																{
-																	if(a==null)
-																		return null;
-																	var b,c=false;
-																	if(a.type=="GeometryCollection")
-																	{
-																		if(!(a.geometries instanceof Array))
-																			throw"GeometryCollection must have geometries array: "+a;b=a.geometries.length;c=Array(b);
-																			for(var d=0;d<b;++d)
-																				c[d]=this.parseGeometry.apply(this,[a.geometries[d]]);
+OpenLayers.Format.GeoJSON=OpenLayers.Class(OpenLayers.Format.JSON,{ignoreExtraDims:false,initialize:function(a){OpenLayers.Format.JSON.prototype.initialize.apply(this,[a])},read:function(a,b,c){b=b?b:"FeatureCollection";var d=null,e=null;if(e=typeof a=="string"?OpenLayers.Format.JSON.prototype.read.apply(this,[a,c]):a)if(typeof e.type!="string")OpenLayers.Console.error("Bad GeoJSON - no type: "+a);else{if(this.isValidType(e,b))switch(b){case "Geometry":try{d=this.parseGeometry(e)}catch(f){OpenLayers.Console.error(f)}break;
+case "Feature":try{d=this.parseFeature(e);d.type="Feature"}catch(g){OpenLayers.Console.error(g)}break;case "FeatureCollection":d=[];switch(e.type){case "Feature":try{d.push(this.parseFeature(e))}catch(h){d=null;OpenLayers.Console.error(h)}break;case "FeatureCollection":a=0;for(b=e.features.length;a<b;++a)try{d.push(this.parseFeature(e.features[a]))}catch(i){d=null;OpenLayers.Console.error(i)}break;default:try{var j=this.parseGeometry(e);d.push(new OpenLayers.Feature.Vector(j))}catch(k){d=null;OpenLayers.Console.error(k)}}}}else OpenLayers.Console.error("Bad JSON: "+
+a);return d},isValidType:function(a,b){var c=false;switch(b){case "Geometry":if(OpenLayers.Util.indexOf(["Point","MultiPoint","LineString","MultiLineString","Polygon","MultiPolygon","Box","GeometryCollection"],a.type)==-1)OpenLayers.Console.error("Unsupported geometry type: "+a.type);else c=true;break;case "FeatureCollection":c=true;break;default:if(a.type==b)c=true;else OpenLayers.Console.error("Cannot convert types from "+a.type+" to "+b)}return c},parseFeature:function(a){var b,c,d;c=a.properties?
+a.properties:{};d=a.geometry&&a.geometry.bbox||a.bbox;try{b=this.parseGeometry(a.geometry)}catch(e){throw e;}b=new OpenLayers.Feature.Vector(b,c);if(d)b.bounds=OpenLayers.Bounds.fromArray(d);if(a.id)b.fid=a.id;return b},parseGeometry:function(a){if(a==null)return null;var b,c=false;if(a.type=="GeometryCollection"){if(!(a.geometries instanceof Array))throw"GeometryCollection must have geometries array: "+a;b=a.geometries.length;c=Array(b);for(var d=0;d<b;++d)c[d]=this.parseGeometry.apply(this,[a.geometries[d]]);
 b=new OpenLayers.Geometry.Collection(c);c=true}else{if(!(a.coordinates instanceof Array))throw"Geometry must have coordinates array: "+a;if(!this.parseCoords[a.type.toLowerCase()])throw"Unsupported geometry type: "+a.type;try{b=this.parseCoords[a.type.toLowerCase()].apply(this,[a.coordinates])}catch(e){throw e;}}this.internalProjection&&this.externalProjection&&!c&&b.transform(this.externalProjection,this.internalProjection);return b},parseCoords:{point:function(a){if(this.ignoreExtraDims==false&&
 a.length!=2)throw"Only 2D points are supported: "+a;return new OpenLayers.Geometry.Point(a[0],a[1])},multipoint:function(a){for(var b=[],c=null,d=0,e=a.length;d<e;++d){try{c=this.parseCoords.point.apply(this,[a[d]])}catch(f){throw f;}b.push(c)}return new OpenLayers.Geometry.MultiPoint(b)},linestring:function(a){for(var b=[],c=null,d=0,e=a.length;d<e;++d){try{c=this.parseCoords.point.apply(this,[a[d]])}catch(f){throw f;}b.push(c)}return new OpenLayers.Geometry.LineString(b)},multilinestring:function(a){for(var b=
 [],c=null,d=0,e=a.length;d<e;++d){try{c=this.parseCoords.linestring.apply(this,[a[d]])}catch(f){throw f;}b.push(c)}return new OpenLayers.Geometry.MultiLineString(b)},polygon:function(a){for(var b=[],c,d,e=0,f=a.length;e<f;++e){try{d=this.parseCoords.linestring.apply(this,[a[e]])}catch(g){throw g;}c=new OpenLayers.Geometry.LinearRing(d.components);b.push(c)}return new OpenLayers.Geometry.Polygon(b)},multipolygon:function(a){for(var b=[],c=null,d=0,e=a.length;d<e;++d){try{c=this.parseCoords.polygon.apply(this,
@@ -1171,5 +868,4 @@ b){var c={type:null};if(a instanceof Array){c.type="FeatureCollection";var d=a.l
 this.createCRSObject(a)}return OpenLayers.Format.JSON.prototype.write.apply(this,[c,b])},createCRSObject:function(a){a=a.layer.projection.toString();var b={};if(a.match(/epsg:/i)){a=parseInt(a.substring(a.indexOf(":")+1));b=a==4326?{type:"OGC",properties:{urn:"urn:ogc:def:crs:OGC:1.3:CRS84"}}:{type:"EPSG",properties:{code:a}}}return b},extract:{feature:function(a){var b=this.extract.geometry.apply(this,[a.geometry]);return{type:"Feature",id:a.fid==null?a.id:a.fid,properties:a.attributes,geometry:b}},
 geometry:function(a){if(a==null)return null;if(this.internalProjection&&this.externalProjection){a=a.clone();a.transform(this.internalProjection,this.externalProjection)}var b=a.CLASS_NAME.split(".")[2];a=this.extract[b.toLowerCase()].apply(this,[a]);return b=="Collection"?{type:"GeometryCollection",geometries:a}:{type:b,coordinates:a}},point:function(a){return[a.x,a.y]},multipoint:function(a){for(var b=[],c=0,d=a.components.length;c<d;++c)b.push(this.extract.point.apply(this,[a.components[c]]));
 return b},linestring:function(a){for(var b=[],c=0,d=a.components.length;c<d;++c)b.push(this.extract.point.apply(this,[a.components[c]]));return b},multilinestring:function(a){for(var b=[],c=0,d=a.components.length;c<d;++c)b.push(this.extract.linestring.apply(this,[a.components[c]]));return b},polygon:function(a){for(var b=[],c=0,d=a.components.length;c<d;++c)b.push(this.extract.linestring.apply(this,[a.components[c]]));return b},multipolygon:function(a){for(var b=[],c=0,d=a.components.length;c<d;++c)b.push(this.extract.polygon.apply(this,
-[a.components[c]]));return b},collection:function(a){for(var b=a.components.length,c=Array(b),d=0;d<b;++d)c[d]=this.extract.geometry.apply(this,[a.components[d]]);return c}},CLASS_NAME:"OpenLayers.Format.GeoJSON"
-});
+[a.components[c]]));return b},collection:function(a){for(var b=a.components.length,c=Array(b),d=0;d<b;++d)c[d]=this.extract.geometry.apply(this,[a.components[d]]);return c}},CLASS_NAME:"OpenLayers.Format.GeoJSON"});

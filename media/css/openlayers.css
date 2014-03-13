@@ -204,12 +204,6 @@ div.olControlMousePosition {
   position: relative;
 }
 
-.marker {
-   background-image: url("../img/openlayers/Marker2.png");
-   background-repeat: no-repeat;
-   width:  24px;
-   height: 24px;
-}
 .olControlNavigationHistory {
    background-image: url("../img/openlayers/navigation_history.png");
    background-repeat: no-repeat;

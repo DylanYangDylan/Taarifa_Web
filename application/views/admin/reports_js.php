@@ -51,42 +51,6 @@
 			}
 		}
 		
-		function reportHideAction ( action, incident_id )
-		{
-			var enable = $("#link" + incident_id).attr("enable");
-			
-			$.ajax({
-				url: '<?php echo url::site()."Tphp/ReportListEnable.php"?>',
-				type: 'POST',
-				data:{
-					enable: enable,
-					id: incident_id
-				},
-				dataType: 'html', 
-				error: function(){
-					alert('Error loading PHP document');
-				},
-				success: function(result){
-					var enableStr = "";
-					var enableAttr = "";
-					var enableVal = "";
-					if(enable == 0){
-						enableStr = "ENABLE";
-						enableAttr = "status_yes";
-						enableVal = 1;
-					}else{
-						enableStr = "DISABLED";
-						enableAttr = "status_no";
-						enableVal = 0;
-					}
-					$("#link" + incident_id).html(enableStr);
-					$("#link" + incident_id).attr("class", enableAttr);
-					$("#link" + incident_id).attr("enable", enableVal); 
-				}
-			});
-		}
-		
-		
 		function showLog(id)
 		{
 			$('#' + id).toggle(400);

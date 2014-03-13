@@ -24,8 +24,8 @@ class Markers_Controller extends Template_Controller
     
     function index( $category_id = 0, $start_date = NULL, $end_date = NULL )
     {       
-        //$placemarks = "";
-        //$style_map = "";
+        $placemarks = "";
+        $style_map = "";
         
         
         // Do we have a category id to filter by?

@@ -98,16 +98,6 @@ class Category_Model extends ORM_Tree {
 		return $cats;
 	}
 
-  public static function get_category_names()
-  {
-    $categories = ORM::factory('category')->find_all();
-    $cat_names = array();
-    foreach($categories as $cat){
-      $cat_names[] = $cat->category_title;
-    }
-    return $cat_names;
-  }
-
 	/**
 	 * Checks if the specified category ID is of type INT and exists in the database
 	 *

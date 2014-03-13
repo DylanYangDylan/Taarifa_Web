@@ -1,4 +1,4 @@
-Ushahidi 2.1.x (Development version)test
+Ushahidi 2.1.x (Development version)
 ------------------------------------
 * Themes
     - Added bueno theme to the list of stock themes

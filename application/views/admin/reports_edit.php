@@ -87,71 +87,6 @@
 								</div>
 							</div>
 							<?php } ?>
-                            
-                            <div class="row">
-								<h4><?php echo Kohana::lang('ui_main.group');?> <span>(<?php echo Kohana::lang('ui_main.select_group');?>)</span></h4>
-								<span class="sel-holder">
-                                <?php
-
-										$arra = $_SERVER['REQUEST_URI'];
-										$outp = explode("/", $arra);
-											
-										if(count($outp)>4){
-											$strSqlCommand11 = "SELECT * FROM incident WHERE id='".$outp[4]."'";
-											$result11 = mysql_query($strSqlCommand11);
-											$row11 = mysql_fetch_array ($result11);
-											
-											$strSqlCommand1 = "SELECT * FROM GGroup";
-											$result = mysql_query($strSqlCommand1);
-											
-											$strSqlCommand12 = "SELECT * FROM GGroup WHERE id='".$row11['ggroup_id']."'";
-											$result12 = mysql_query($strSqlCommand12);
-											$row12 = mysql_fetch_array ($result12);
-											if($row12['id']<>0){
-												//echo "<form method='POST'>";
-	  											echo "<select name='fo' onChange='value = this.options[this.selectedIndex].value;'>";
-												echo "<option value='".$row12['id']."'>".$row12['GGroup_Name']."</option>";
-											
-												while ($row = mysql_fetch_array ($result)) 
-													{	
-														if($row['id']<>$row12['id']){
-  															echo "<option value='".$row['id']."'>".$row['GGroup_Name']."</option>";
-														}
-  													}
-												echo "<option value='0'>No Group</option>";
-												echo "</select>";
-												//echo "</form>";
-											}
-											else{
-												//echo "<form method='POST'>";
-	  											echo "<select name='fo' onChange='value = this.options[this.selectedIndex].value;'>";
-												echo "<option value='0'>No Group</option>";
-												while ($row = mysql_fetch_array ($result)) 
-													{	
-  														echo "<option value='".$row['id']."'>".$row['GGroup_Name']."</option>";
-  													}
-												echo "</select>";
-												//echo "</form>";
-											}
-										}
-										else{
-											$strSqlCommand1 = "SELECT * FROM GGroup";
-											$result = mysql_query($strSqlCommand1);
-											//echo "<form method='POST'>";
-	  										echo "<select name='fo' onChange='value = this.options[this.selectedIndex].value;'>";
-											echo "<option value='0'>No Group</option>";
-											while ($row = mysql_fetch_array ($result)) 
-												{	
-  													echo "<option value='".$row['id']."'>".$row['GGroup_Name']."</option>";
-  												}
-											echo "</select>";
-											//echo "</form>";
-										}
-									?>
-								</span>
-								<div id="form_loader" style="float:left;"></div>
-							</div>
-                            
 							<div class="row">
 								<h4><?php echo Kohana::lang('ui_main.form');?> <span>(<?php echo Kohana::lang('ui_main.select_form_type');?>)</span></h4>
 								<span class="sel-holder">
@@ -160,7 +95,6 @@
 								</span>
 								<div id="form_loader" style="float:left;"></div>
 							</div>
-							<? //print_r($form);?>
 							<div class="row">
 							  <h4>Status</h4>
 							  <span class="sel-holder">
@@ -272,7 +206,7 @@
 						<div class="f-col-1">
 							<div class="incident-location">
 								<h4><?php echo Kohana::lang('ui_main.incident_location');?></h4>
-								<div class="location-info" style="width:310px">
+								<div class="location-info">
 									<span><?php echo Kohana::lang('ui_main.latitude');?>:</span>
 									<?php print form::input('latitude', $form['latitude'], ' class="text"'); ?>
 									<span><?php echo Kohana::lang('ui_main.longitude');?>:</span>

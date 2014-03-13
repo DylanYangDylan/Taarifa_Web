@@ -1,12 +1,11 @@
 <?php blocks::open("reports");?>
-<div style="border-bottom:1px solid #ccc;padding:15px 0 5px 10px;"><?php blocks::title(Kohana::lang('ui_main.reports_listed'));?></div>
-<div style="padding:10px;">
+<?php blocks::title(Kohana::lang('ui_main.reports_listed'));?>
 <table class="table-list">
 	<thead>
 		<tr>
-			<th scope="col" class="title"><span style="color:#ccc;"><?php echo Kohana::lang('ui_main.title'); ?></span></th>
-			<th scope="col" class="location"><span style="color:#ccc;"><?php echo Kohana::lang('ui_main.location'); ?></span></th>
-			<th scope="col" class="date"><span style="color:#ccc;"><?php echo Kohana::lang('ui_main.date'); ?></span></th>
+			<th scope="col" class="title"><?php echo Kohana::lang('ui_main.title'); ?></th>
+			<th scope="col" class="location"><?php echo Kohana::lang('ui_main.location'); ?></th>
+			<th scope="col" class="date"><?php echo Kohana::lang('ui_main.date'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -38,4 +37,3 @@
 <a class="more" href="<?php echo url::site() . 'reports/' ?>"><?php echo Kohana::lang('ui_main.view_more'); ?></a>
 <div style="clear:both;"></div>
 <?php blocks::close();?>
-</div>

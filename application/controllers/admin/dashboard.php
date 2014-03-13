@@ -24,30 +24,18 @@ class Dashboard_Controller extends Admin_Controller
 	{
 		$this->template->content = new View('admin/dashboard');
 		$this->template->content->title = Kohana::lang('ui_admin.dashboard');
-		$this->template->this_page = 'dashboard'; 
-		
+		$this->template->this_page = 'dashboard';
+
 		// Retrieve Dashboard Count...
 
 		// Total Reports
-		if (! admin::permissions($this->user, "checkin_admin"))
-        {
-			$this->template->content->reports_total = ORM::factory('incident')->where('user_id', $_SESSION['auth_user']->id)->where('enable', '1')->count_all();
-        }else
-		{
-			$this->template->content->reports_total = ORM::factory('incident')->where('enable', '1')->count_all();
-		}  
-		
+		$this->template->content->reports_total = ORM::factory('incident')->count_all();
+
 		// Total Unapproved Reports
-		if (! admin::permissions($this->user, "checkin_admin"))
-        {
-			$this->template->content->reports_unapproved = ORM::factory('incident')->where('incident_active', '0')->where('user_id', $_SESSION['auth_user']->id)->where('enable', '1')->count_all();
-		}else
-		{
-			$this->template->content->reports_unapproved = ORM::factory('incident')->where('incident_active', '0')->where('enable', '1')->count_all();
-		} 
+		$this->template->content->reports_unapproved = ORM::factory('incident')->where('incident_active', '0')->count_all();
 
 		// Total Unverified Reports
-		$this->template->content->reports_unverified = ORM::factory('incident')->where('incident_verified', '0')->where('enable', '1')->count_all();
+		$this->template->content->reports_unverified = ORM::factory('incident')->where('incident_verified', '0')->count_all();
 
 		// Total Categories
 		$this->template->content->categories = ORM::factory('category')->count_all();
@@ -87,13 +75,7 @@ class Dashboard_Controller extends Admin_Controller
 
 
 		// Get reports for display
-		if (! admin::permissions($this->user, "checkin_admin"))
-        {
-			$incidents = ORM::factory('incident')->limit(5)->where('user_id', $_SESSION['auth_user']->id)->orderby('incident_dateadd', 'desc')->where('enable', '1')->find_all();
-		}else{
-			$incidents = ORM::factory('incident')->limit(5)->orderby('incident_dateadd', 'desc')->where('enable', '1')->find_all();
-		}
-		
+		$incidents = ORM::factory('incident')->limit(5)->orderby('incident_dateadd', 'desc')->find_all();
 		$this->template->content->incidents = $incidents;
 
 		// Get Incoming Media (We'll Use NewsFeeds for now)
